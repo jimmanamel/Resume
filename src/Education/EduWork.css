@@ -1,0 +1,27 @@
+.education {
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid black;
+  padding: 20px;
+  margin: 20px;
+}
+
+.work {
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid black;
+  padding: 20px;
+  margin: 20px;
+}
+
+.skill {
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid black;
+  padding: 20px;
+  margin: 20px;
+}
+
+.eduContainer{
+    display:inline-flex;
+}
