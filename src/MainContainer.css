@@ -28,11 +28,19 @@
 }
 
 .Projects{
+    padding: 10px;
     height: 100vh;
     background-color: rgb(254, 202, 254);
 }
 
 .Contacts{
-    height: 100vh;
+    height: 60vh;
     background-color: rgb(255, 254, 171);
 }
+
+@media only screen and (max-width: 800px) {
+    .EduWork{
+        height: 950px;
+        background-color: rgb(250, 241, 184);
+    }
+  }

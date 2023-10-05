@@ -22,11 +22,11 @@ const Home = () => {
           <b>Software Developer</b>
           <b>...</b>
         </div>
-        <div className="socialMediaContainer">
+        {/* <div className="socialMediaContainer">
         <div className="socialMedia"><img src={WhatsApp} className="WhatsAppIcon" alt="WhatsApp" /></div>
         <div className="socialMedia"><img src={instagram} className="instagramIcon" alt="instagram" /></div>
           <div className="socialMedia"><img src={linkedin} className="linkedinIcon" alt="linkedin" /></div>
-        </div>
+        </div> */}
       </div>
     </Fragment>
   );

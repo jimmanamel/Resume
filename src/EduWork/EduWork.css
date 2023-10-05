@@ -3,7 +3,7 @@
   border-radius: 10px;
   border: 2px solid black;
   padding: 20px;
-  margin: 20px;
+  margin: 55px 20px;
 }
 
 .work {
@@ -20,8 +20,16 @@
   border: 2px solid black;
   padding: 20px;
   margin: 20px;
+  text-align: left;
 }
 
 .eduContainer{
     display:inline-flex;
+}
+
+@media only screen and (max-width: 800px) {
+  .eduContainer{
+    display:list-item;
+    padding: 2px;
+}
 }

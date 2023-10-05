@@ -1,0 +1,47 @@
+.contactContainer{
+    display: inline-flex; 
+}
+
+.contactHeader{
+    text-align: left;
+}
+
+.contactLeft{
+    padding: 20px 125px;
+    text-align: left;
+}
+
+.contactRight{
+    padding: 50px;
+    justify-content:space-between
+}
+
+.contactData{
+    padding-top: 50px;
+}
+
+input{
+    margin: 20px;
+}
+
+#Name{
+    height: 35px;
+    width: 250px;
+    font-size: 14px;
+}
+
+#Email{
+    height: 35px;
+    width: 250px;
+    font-size: 14px;
+}
+
+#Message{
+    height: 150px;
+    width: 550px;
+    font-size: 14px;
+}
+
+#submitButton{
+    
+}
