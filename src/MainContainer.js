@@ -8,11 +8,12 @@ import Personal from "./Personal/Personal";
 import Contact from "./Contact/Contact";
 
 const MainContainer = () => {
+
   return (
     <Fragment>
         <div className="NavBarContainer"><NavBar/></div>
       <div className="Home"><Home/></div>
-      <div className="About"><About/></div>
+      {/* <div className="About"><About/></div> */}
       <div className="EduWork"><EduWork/></div>
       <div className="Projects"><Personal/></div>
       <div className="Contacts"><Contact/></div>

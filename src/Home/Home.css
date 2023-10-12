@@ -1,9 +1,11 @@
 .nameCard{
     padding-top: 10vh;
+    padding: 0 80px;
 }
 
 .homeTextRow{
   padding-top: 20px;
+  padding-bottom: 10px;
     display: grid;
     font-size: larger;
 }

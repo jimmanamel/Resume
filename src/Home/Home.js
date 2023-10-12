@@ -20,13 +20,9 @@ const Home = () => {
         <div className="homeTextRow">
           <b>Jim Joseph</b>
           <b>Software Developer</b>
-          <b>...</b>
         </div>
-        {/* <div className="socialMediaContainer">
-        <div className="socialMedia"><img src={WhatsApp} className="WhatsAppIcon" alt="WhatsApp" /></div>
-        <div className="socialMedia"><img src={instagram} className="instagramIcon" alt="instagram" /></div>
-          <div className="socialMedia"><img src={linkedin} className="linkedinIcon" alt="linkedin" /></div>
-        </div> */}
+        <p> I am passionate software engineer, Currently working as a Project Engineer in Wipro Technologies Ltd.<br/> Has experience in working in various project and application over 3 years. </p>
+        <p> It was good meeting you, have a great tour and share your experience!</p>
       </div>
     </Fragment>
   );
