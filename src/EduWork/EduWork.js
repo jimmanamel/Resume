@@ -3,7 +3,13 @@ import './EduWork.css'
 const EduWork = () => {
   return (
     <div className='eduContainer'>
-      <div className='education'>
+        <div><h2 className='careerHeader'>career Summary</h2><p>A comprehensive summary of education, career and skills</p></div>
+        <div className='careerInnerContainer'>
+          <div className='education'><p>B.Tech graduate in computer science and engineering, from college of engineering Chengannur in the year of 2020</p></div>
+          <div className='work'><p>Currently, Working as a project engineer at Wipro Technologies Limited in Chennai, Tamil Nadu</p></div>
+          <div className='skills'><p>Has 3 years of Professional experience in Technologies like HTML, CSS, Javascript, React JS, Next JS, MERN stack, SQL ..etc</p></div>
+      </div>
+      {/* <div className='education'>
         <p>Education</p>
         <table cellSpacing={10}cellPadding={10}>
           <tr>
@@ -46,7 +52,7 @@ const EduWork = () => {
           <li>SQL</li>
         </ul>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
