@@ -1,40 +1,34 @@
-
-.dropDownMenuItem{
+.NavOuter{
     background-color: white;
-    width: 3em;
-    height: 5em;
+    border-radius: 15px 15px 15px 15px;
+    padding: 1px 0;
 }
 
-.dropDownMenuItemLast{
-    border-radius: 0px 0px 15px 15px;
-    background-color: white;
+.dropDownMenuItem{   
     width: 3em;
-    height: 5em;
-}
-
-.dropDownMenuItemInitial{
-    border-radius: 15px 15px 0px 0px;
-    background-color: white;
-    width: 3em;
-    height: 5em;
-}
-
-.Icon{
-    margin-top: 2px !important;
+    margin: 25px 0;
 }
 
 #HomeNav{
     background-color: rgb(232, 226, 236);
+    padding: 5px 0px;
 }
 
 #CareerNav{
     background-color: rgb(232, 226, 236);
+    padding: 5px 0px;
 }
 
 #ProjectsNav{
     background-color: rgb(232, 226, 236);
+    padding: 5px 0px;
 }
 
 #ContactsNav{
     background-color: rgb(232, 226, 236);
+    padding: 5px 0px;
+}
+
+a{
+    color: black;
 }
