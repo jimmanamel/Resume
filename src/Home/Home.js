@@ -1,19 +1,22 @@
 import { Fragment } from "react";
 import { AiOutlineDownload } from "react-icons/ai";
+
 import myPic from "././profilePic.png";
 import facebook from "././facebook.png";
 import instagram from "././instagram.png";
 import WhatsApp from "././WhatsApp.png";
 import linkedin from "././linkedin.png";
+import resume from "././Jim_Joseph.pdf" 
+
 import "./Home.css";
 
 const Home = () => {
   return (
     <Fragment>
       <div className="downloadIconContainer">
-        <div className="downloadIcon">
+        <a href={resume} download><div className="downloadIcon">
           <AiOutlineDownload size="2em" />
-        </div>
+        </div></a>
       </div>
       <div className="nameCard">
         <img src={myPic} className="myPic" alt="MY PIC" />
