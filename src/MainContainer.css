@@ -40,7 +40,12 @@
 
 @media only screen and (max-width: 800px) {
     .EduWork{
-        height: 950px;
+        height: 1030px;
         background-color: rgb(255, 255, 255);
+    }
+
+    .Contacts{
+        height: 1100px;
+        background-color: rgb(255, 254, 171);
     }
   }

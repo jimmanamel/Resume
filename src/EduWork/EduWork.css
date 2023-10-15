@@ -30,9 +30,35 @@
   box-shadow: 0px 0px 20px darkred;
 }
 
-@media only screen and (max-width: 800px) {
-  .eduContainer{
-    display:list-item;
-    padding: 2px;
+@media only screen and (max-width: 1024px) {
+  .careerInnerContainer{
+    display: grid;
+  }
+
+  .eachCareerItem{
+    margin: 15px;
+    padding: 10px;
+  }
 }
+
+@media only screen and (max-width: 768px) {
+  .careerInnerContainer{
+    display: unset;
+  }
+
+  .eachCareerItem{
+    margin: 10px;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .careerInnerContainer{
+    display: unset;
+  }
+
+  .eachCareerItem{
+    margin: auto 0px;
+    padding: 5px;
+  }
 }

@@ -4,8 +4,6 @@ import './Contact.css'
 
 const Contact=()=>{
     return(
-        <Fragment>
-            
             <div className="contactContainer">
                 <div className="contactLeft">
                 <h3 className="contactHeader">Contact Me</h3>
@@ -34,7 +32,6 @@ const Contact=()=>{
                     </div>
                 </div>
             </div>
-        </Fragment>
     )
 }
 
