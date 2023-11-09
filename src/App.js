@@ -1,12 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-import MainContainer from './MainContainer';
+import { Fragment } from "react";
+import NavbarContainer from "./Components/Navigation/NavbarContainer";
 
-function App() {
+const App=()=> {
   return (
-    <div className="App">
-      Hai Jim
-    </div>
+    <Fragment>
+      <NavbarContainer />
+    </Fragment>
   );
 }
 
