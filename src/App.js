@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 
 import NavbarContainer from "./Components/Navigation/NavbarContainer";
 import HomeContainer from "./Components/Home/HomeContainer";

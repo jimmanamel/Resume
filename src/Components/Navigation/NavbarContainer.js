@@ -1,20 +1,16 @@
-import Navbar from "./Navbar"
-import SearchBar from "./SearchBar"
+import Navbar from "./Navbar";
+import SearchBar from "./SearchBar";
 
-const NavbarContainer=()=>{
-    return(
-        <nav>
-            <span>
-                <SearchBar />
-            </span>
-            <span>
-                <Navbar />
-            </span>
-            <span>
-                <button></button>
-            </span>
-        </nav>
-    )
-}
+import './NavbarContainer.scss'
 
-export default NavbarContainer
+const NavbarContainer = () => {
+  return (
+    <div className="navContainer">
+      <SearchBar />
+      <Navbar />
+      <button></button>
+    </div>
+  );
+};
+
+export default NavbarContainer;
