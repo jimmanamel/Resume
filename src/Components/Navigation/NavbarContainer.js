@@ -1,14 +1,18 @@
+import { BsDownload } from "react-icons/bs";
+
 import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
 
-import './NavbarContainer.scss'
+import './NavigationBar.scss'
 
 const NavbarContainer = () => {
   return (
     <div className="navContainer">
       <SearchBar />
       <Navbar />
-      <button></button>
+      <div className="downloadIcon">
+        <BsDownload />
+      </div>
     </div>
   );
 };

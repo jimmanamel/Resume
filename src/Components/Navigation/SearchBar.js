@@ -1,6 +1,11 @@
+import { BsSearch } from "react-icons/bs";
+
 const SearchBar=()=>{
     return(
-        <text>This is for Search field</text>
+        <div className="searchContainer">
+            <BsSearch/>
+            <input type="search" id="site-search" name="site-search"/>
+        </div>
     )
 }
 
