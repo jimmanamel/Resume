@@ -2,16 +2,52 @@
     background-color: rgb(217, 217, 217, 80%);
     height: 89px;
     display: flex;
+    align-items: center;
+    border-radius: 0 0 20px 20px;
 }
 
 .searchContainer{
     width: 40%;
+    padding-left: 40px;
+    display: flex;
+    
+    input{
+        margin-left: 20px;
+        border: 3px solid #6765EC;
+        border-radius: 10px;
+        width: 200px;
+    }
 }
 
 .navBar{
-    width: 50%;
+    width: 45%;
+    font-family:'poppins';
+    font-weight: 600;
+    
+    .selected{
+        background-color: white;
+        padding: 5px 10px;
+        margin: 15px;
+        border-radius: 20px;
+        border: 3px solid #35A835;
+    }
+
+    span{
+        padding: 5px 10px;
+        margin: 15px;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
 }
 
 .downloadIcon{
-    width: 10%;
+    width: 15%;
+    text-align: center;
+}
+
+nav{
+    text-align: right;
 }

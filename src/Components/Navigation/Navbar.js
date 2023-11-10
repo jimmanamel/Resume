@@ -1,14 +1,34 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
-import './NavigationBar.scss'
+import { navbarMapper } from "../Constants/constant";
+
+import "./NavigationBar.scss";
 
 const Navbar = () => {
+  const [activeRoute, setActiveRoute] = useState("Home");
+
+  const location = useLocation();
+
+  useEffect(() => {
+    setActiveRoute(location.pathname);
+  }, [location]);
+
+  const navItem = (navLink, navName) => {
+    return (
+      <span className={activeRoute === navLink ? "selected" : ""}>
+        <Link to={navLink} onClick={() => setActiveRoute(navLink)}>
+          {navName}
+        </Link>
+      </span>
+    );
+  };
+
   return (
     <nav className="navBar">
-        <Link to="/">Home</Link>
-        <Link to="/Career">Career</Link>
-        <Link to="/Projects">Projects</Link>
-        <Link to="/Contacts">Contacts</Link>
+      {Object.keys(navbarMapper).map((navElement) =>
+        navItem(navElement, navbarMapper[navElement])
+      )}
     </nav>
   );
 };

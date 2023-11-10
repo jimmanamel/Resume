@@ -11,7 +11,7 @@ const NavbarContainer = () => {
       <SearchBar />
       <Navbar />
       <div className="downloadIcon">
-        <BsDownload />
+        <BsDownload  size="2em"/>
       </div>
     </div>
   );

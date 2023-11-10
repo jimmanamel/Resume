@@ -3,7 +3,7 @@ import { BsSearch } from "react-icons/bs";
 const SearchBar=()=>{
     return(
         <div className="searchContainer">
-            <BsSearch/>
+            <div className="searchIcon"><BsSearch size="2em"/></div>
             <input type="search" id="site-search" name="site-search"/>
         </div>
     )
