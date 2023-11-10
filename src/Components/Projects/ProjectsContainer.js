@@ -1,6 +1,6 @@
 const ProjectsContainer=()=>{
     return(
-        <text>This is for Projects</text>
+        <div>This is for Projects</div>
     )
 }
 

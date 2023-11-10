@@ -1,6 +1,6 @@
 const ContactsContainer=()=>{
     return(
-        <text>This is for Contacts</text>
+        <div>This is for Contacts</div>
     )
 }
 

@@ -1,6 +1,6 @@
 const HomeContainer=()=>{
     return(
-        <text>This is for Home</text>
+        <div>This is for Home</div>
     )
 }
 

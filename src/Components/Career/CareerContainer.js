@@ -1,6 +1,6 @@
 const CareerContainer=()=>{
     return(
-        <text>This is for Career</text>
+        <div>This is for Career</div>
     )
 }
 

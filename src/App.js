@@ -7,6 +7,8 @@ import CareerContainer from "./Components/Career/CareerContainer";
 import ProjectsContainer from "./Components/Projects/ProjectsContainer";
 import ContactsContainer from "./Components/Contacts/ContactsContainer";
 
+import './font.scss'
+
 const App=()=> {
   return (
     <Fragment>

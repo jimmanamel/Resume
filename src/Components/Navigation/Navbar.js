@@ -16,7 +16,7 @@ const Navbar = () => {
 
   const navItem = (navLink, navName) => {
     return (
-      <span className={activeRoute === navLink ? "selected" : ""}>
+      <span className={activeRoute === navLink ? "selected" : ""} key={navLink+navName}>
         <Link to={navLink} onClick={() => setActiveRoute(navLink)}>
           {navName}
         </Link>
