@@ -8,7 +8,7 @@
 .imageContainer{
     position: relative;
     width: 55%;
-    height: 671px;
+    height: 595px;
 }
 
 .textContainer{
@@ -48,16 +48,21 @@
     padding-left: 25px;
 }
 
-.Content{
-    font-size: 20px;
-    max-width: 400px;
-    padding-left: 25px;
+.content{
+    font-size: 15px;
+    max-width: 320px;
+    padding-left: 25px; 
 }
 
-.socialMediaLogos{
+.lowerCell{
     padding-left: 25px; 
 
     span{
-        padding: 5px;
+        display: inline-block;
+       background-color: #d6d6d6;
+       font-size: 25px;
+       margin: 10px;
+       height: 29px;
+       border-radius: 5px;
     }
 }

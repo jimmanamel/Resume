@@ -16,33 +16,34 @@ const HomeContainer = () => {
         <img
           className="centered-image"
           src={dp}
-          alt="My image"
-          width="644px"
-          height="671px"
+          alt="error"
+          width="597px"
+          height="595px"
         />
       </div>
       <div className="textContainer">
         <p className="name">Jim Joseph</p>
         <p className="designation">Software Developer & Designer</p>
-        <p className="Content">
-          An experienced developer with 3 years of professional expertise in
-          working with Wipro & Apple.
-        </p>
-        <div className="socialMediaLogos">
+        
+          <p className="content">
+            An experienced developer with 3 years of professional expertise in
+            working with Wipro & Apple.
+          </p>
+          <div className="lowerCell">
           <span>
-            <AiOutlineLinkedin size="2em" />
+            <AiOutlineLinkedin />
           </span>
           <span>
-            <AiOutlineFacebook size="2em" />
+            <AiOutlineFacebook />
           </span>
           <span>
-            <AiOutlineInstagram size="2em" />
+            <AiOutlineInstagram />
           </span>
           <span>
-            <CiTwitter size="2em" />
+            <CiTwitter />
           </span>
           <span>
-            <BiLogoWhatsapp size="2em" />
+            <BiLogoWhatsapp />
           </span>
         </div>
         <button>Download CV</button>
