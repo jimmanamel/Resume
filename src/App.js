@@ -7,6 +7,7 @@ import CareerContainer from "./Components/Career/CareerContainer";
 import ProjectsContainer from "./Components/Projects/ProjectsContainer";
 import ContactsContainer from "./Components/Contacts/ContactsContainer";
 
+import './global.css'
 import './font.scss'
 
 const App=()=> {
