@@ -1,5 +1,5 @@
 import { FaUserGraduate, FaTools } from "react-icons/fa";
-import { BiBriefcase } from "react-icons/bi";
+import { BsBriefcase } from "react-icons/bs";
 
 import "./Career.scss";
 
@@ -11,23 +11,27 @@ const CareerContainer = () => {
       </div>
       <div className="careerInnerContainer">
         <div className="professionalCareer">
-          <BiBriefcase />
+          <span>
+          <BsBriefcase size="5em"/>
           <p>Summary of professional career</p>
+          </span>
         </div>
         <div className="container">
           <div className="careerCover">
             <div className="career2">
-              <FaUserGraduate />
-              B.Tech graduate in computer science and engineering, from CEC in
-              the year of 2020
+              <span>
+              <FaUserGraduate size="4em"/>
+              <p>B.Tech graduate in computer science and engineering, from CEC, in the year of 2020</p>
+              </span>
               <button>Read More</button>
             </div>
           </div>
           <div className="careerCover">
             <div className="career3">
-              <FaTools />
-              Has 3 years of Professional experience in variety of font end,
-              backend and full stack technologies
+              <span>
+              <FaTools size="4em"/>
+              <p>Has 3 years of Professional expertise in variety of fontend, backend and fullstack technologies</p>
+              </span>
               <button>Read More</button>
             </div>
           </div>
