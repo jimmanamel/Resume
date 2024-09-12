@@ -1,68 +1,112 @@
-.homeContainer{
-    display: flex;
-    font-family: 'poppins';
-    justify-content: flex-start;
-    align-items: center;
-}
+.homeContainer {
+    font-family: "poppins";
+    text-align: center;
+  }
 
-.imageContainer{
+  .centered-image {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+  }
+
+  .textContainer {
+
+    button {
+        background-color: #66fa66;
+        border: none;
+        border-radius: 20px;
+        width: 170px;
+        height: 40px;
+        font-size: medium;
+        margin-left: 25px;
+        margin: 10px;
+    }
+    span {
+        display: inline-block;
+        background-color: #d6d6d6;
+        font-size: 25px;
+        margin: 10px;
+        height: 29px;
+        border-radius: 5px;
+      }
+  }
+
+  .name {
+    font-size: 60px;
+    font-weight: 500;
+    margin: 0px;
+  }
+
+  .designation {
+    font-size: 23px;
+    font-weight: 400;
+    margin: 0px;
+  }
+
+  .content {
+    font-size: 20px;
+    padding: 0px 30px;
+  }
+
+@media (min-width: 1024px) {
+  .homeContainer {
+    display: flex;
+    align-items: center;
+    text-align: unset;
+    padding: 20px 0px;
+  }
+
+  .imageContainer {
     position: relative;
     width: 55%;
     height: 595px;
-}
+    padding: 0px 10px;
+  }
 
-.textContainer{
-    width:45%;
-
-    button{
-        background-color: #66FA66;
-        border:none;
-        border-radius: 20px;
-        width: 200px;
-        height: 50px;
-        font-size: large;
-        margin-left: 25px;
-    }
-}
-
-.centered-image {
+  .centered-image {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 100%;
-    max-height: 100%;
+    width: 597px;
+    height: 595px;
+    border-radius: 15%;
   }
 
-.name{
-    font-size: 65px;
-    font-weight: 500;
-    margin: 0px;
-    padding-left: 25px;
-}
+  .textContainer {
+    width: 45%;
+    margin-top: 100px;
 
-.designation{
-    font-size: 30px;
-    font-weight: 400;
-    margin: 0px;
-    padding-left: 25px;
-}
-
-.content{
-    font-size: 15px;
-    max-width: 320px;
-    padding-left: 25px; 
-}
-
-.lowerCell{
-    padding-left: 25px; 
-
-    span{
-        display: inline-block;
-       background-color: #d6d6d6;
-       font-size: 25px;
-       margin: 10px;
-       height: 29px;
-       border-radius: 5px;
+    button {
+      width: 200px;
+      height: 50px;
+      font-size: large;
+      margin-left: 25px;
     }
+    span {
+        margin-left: 25px;
+      }
+  }
+
+  .name {
+    font-size: 70px;
+    padding-left: 25px;
+  }
+
+  .designation {
+    font-size: 35px;
+    padding-left: 25px;
+  }
+
+  .content {
+    font-size: 20px;
+    max-width: 500px;
+    padding-left: 25px;
+  }
+
+  .lowerCell {
+    padding-left: 25px;
+
+   
+  }
 }

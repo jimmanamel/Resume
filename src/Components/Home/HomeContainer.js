@@ -16,9 +16,7 @@ const HomeContainer = () => {
         <img
           className="centered-image"
           src={dp}
-          alt="error"
-          width="597px"
-          height="595px"
+          alt="Not loaded"   
         />
       </div>
       <div className="textContainer">
@@ -26,10 +24,10 @@ const HomeContainer = () => {
         <p className="designation">Software Developer & Designer</p>
         
           <p className="content">
-            An experienced developer with 3 years of professional expertise in
-            working with Wipro & Apple.
+            An experienced Software developer with 4 years of professional expertise in
+            working with Accenture, Wipro & Apple.
           </p>
-          <div className="lowerCell">
+          <section>
           <span>
             <AiOutlineLinkedin />
           </span>
@@ -45,7 +43,7 @@ const HomeContainer = () => {
           <span>
             <BiLogoWhatsapp />
           </span>
-        </div>
+          </section>
         <button>Download CV</button>
       </div>
     </div>

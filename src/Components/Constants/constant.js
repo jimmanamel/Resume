@@ -5,4 +5,14 @@ const navbarMapper = {
   "/Contacts": "Contacts",
 };
 
-export { navbarMapper };
+const tempProjects = [
+  { name: "" },
+  { name: "" },
+  { name: "" },
+  { name: "" },
+  { name: "" },
+  { name: "" },
+
+];
+
+export { navbarMapper,tempProjects };
