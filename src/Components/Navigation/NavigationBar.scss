@@ -1,57 +1,119 @@
-.navContainer{
+.navContainer {
+  background-color: rgb(217, 217, 217, 80%);
+  height: 89px;
+  display: flex;
+  align-items: center;
+  border-radius: 0 0 20px 20px;
+}
+
+.searchContainer {
+  width: 40%;
+  padding-left: 40px;
+  display: flex;
+
+  input {
+    margin-left: 20px;
+    border: 3px solid #6765ec;
+    border-radius: 10px;
+    width: 200px;
+  }
+}
+
+// .navBar {
+//   width: 45%;
+//   font-family: "poppins";
+//   font-weight: 600;
+
+//   .unselected {
+//     border: 3px solid transparent;
+//   }
+
+//   .selected {
+//     background-color: white;
+//     padding: 5px 10px;
+//     margin: 15px;
+//     border-radius: 20px;
+//     border: 3px solid #35a835;
+//   }
+
+//   span {
+//     padding: 5px 10px;
+//     margin: 15px;
+//   }
+
+//   a {
+//     text-decoration: none;
+//     color: black;
+//   }
+// }
+
+// .downloadIcon {
+// }
+
+// nav {
+//   text-align: right;
+// }
+
+@media (min-width: 1024px) {
+  .navContainer {
     background-color: rgb(217, 217, 217, 80%);
     height: 89px;
     display: flex;
     align-items: center;
     border-radius: 0 0 20px 20px;
-}
 
-.searchContainer{
+    &__toggle {
+        display: none;
+      }
+  }
+
+  .searchContainer {
     width: 40%;
     padding-left: 40px;
     display: flex;
-    
-    input{
-        margin-left: 20px;
-        border: 3px solid #6765EC;
-        border-radius: 10px;
-        width: 200px;
-    }
-}
 
-.navBar{
+    input {
+      margin-left: 20px;
+      border: 3px solid #6765ec;
+      border-radius: 10px;
+      width: 200px;
+    }
+  }
+
+  .navBar {
     width: 45%;
-    font-family:'poppins';
+    font-family: "poppins";
     font-weight: 600;
 
-    .unselected{
-        border: 3px solid transparent;
-    }
-    
-    .selected{
-        background-color: white;
-        padding: 5px 10px;
-        margin: 15px;
-        border-radius: 20px;
-        border: 3px solid #35A835;
+    .unselected {
+      border: 3px solid transparent;
     }
 
-    span{
-        padding: 5px 10px;
-        margin: 15px;
+    .selected {
+      background-color: white;
+      padding: 5px 10px;
+      margin: 15px;
+      border-radius: 20px;
+      border: 3px solid #35a835;
     }
 
-    a{
-        text-decoration: none;
-        color: black;
+    span {
+      padding: 5px 10px;
+      margin: 15px;
     }
-}
 
-.downloadIcon{
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  .downloadIcon {
     width: 15%;
     text-align: center;
-}
+  }
 
-nav{
+  nav {
     text-align: right;
+  }
 }

@@ -1,6 +1,6 @@
-import { Fragment } from "react";
 import {Routes, Route} from 'react-router-dom'
 
+import { MediaQueryProvider } from "./MediaQueryContext";
 import NavbarContainer from "./Components/Navigation/NavbarContainer";
 import HomeContainer from "./Components/Home/HomeContainer";
 import CareerContainer from "./Components/Career/CareerContainer";
@@ -12,7 +12,7 @@ import './font.scss'
 
 const App=()=> {
   return (
-    <Fragment>
+    <MediaQueryProvider>
       <NavbarContainer />
         <Routes>
           <Route>
@@ -22,7 +22,7 @@ const App=()=> {
             <Route path="/Contacts" element={<ContactsContainer />}/>
           </Route>
         </Routes>
-    </Fragment>
+    </MediaQueryProvider>
   );
 }
 
