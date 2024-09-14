@@ -5,7 +5,8 @@
   margin: 0 auto;
   border-radius: 10px;
   perspective: 1000px; // Creates a 3D effect
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d;
   padding-bottom: 20px;
 
   &__inner {
@@ -38,17 +39,35 @@
   }
 
   &__front {
-    background-image: linear-gradient(110deg, #EAF3FD, #3A90F4);
+    background-image: linear-gradient(110deg, #3A90F4, #EAF3FD);
     color: black;
   }
 
   &__back {
-    background-image: linear-gradient(45deg, #3A90F4, #EAF3FD);
+    background-image: linear-gradient(45deg, #EAF3FD, #3A90F4);
     color: white;
     transform: rotateY(180deg);
   }
 }
 
+// .flip-card:hover {
+//   transform: scale(1.02); /* Slightly scales the card on hover */
+// }
+
+.flip-card.animate {
+  animation: scaleUp 1s infinite alternate;
+}
+
 .flip-card:hover {
-  transform: scale(1.02); /* Slightly scales the card on hover */
+  animation-play-state: paused;
+  transform: scale(0); /* Ensure scaling stops on hover */
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.03); /* Slight scale increase */
+  }
 }

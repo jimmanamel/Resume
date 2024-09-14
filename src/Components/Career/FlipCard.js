@@ -12,7 +12,7 @@ const FlipCard = () => {
   };
   return (
     <div
-      className={`flip-card ${isFlipped ? "flip-card--flipped" : ""}`}
+      className={`flip-card ${isFlipped ? "flip-card--flipped" : ""} animate`}
       onClick={handleClick}
     >
       <div className="flip-card__inner">
