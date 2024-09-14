@@ -1,5 +1,4 @@
 import { FaUserGraduate, FaTools } from "react-icons/fa";
-import { BsBriefcase } from "react-icons/bs";
 
 import "./Career.scss";
 import FlipCard from "./FlipCard";

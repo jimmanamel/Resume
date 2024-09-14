@@ -1,6 +1,8 @@
+import ComingSoonContainer from "../ComingSoon/ComingSoonContainer"
+
 const ContactsContainer=()=>{
     return(
-        <div>This is for Contacts</div>
+        <ComingSoonContainer/>
     )
 }
 
