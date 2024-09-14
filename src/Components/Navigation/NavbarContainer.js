@@ -19,12 +19,15 @@ const NavbarContainer = () => {
     <div className="navContainer">
       <SearchBar />
       {!isDesktop && (
+        <div className="navContainer__menuButton">
         <HiOutlineMenuAlt2
           className="navContainer__toggle"
           onClick={toggleMenu}
+          size={25}
         />
+        </div>
       )}
-      <Navbar isNavBarOpen={isNavBarOpen} isDesktop={isDesktop} />
+      <Navbar isNavBarOpen={isNavBarOpen} setIsNavBarOpen={setIsNavBarOpen} isDesktop={isDesktop} />
       {isDesktop && (
         <div className="downloadIcon">
           <BsDownload size="2em" />
