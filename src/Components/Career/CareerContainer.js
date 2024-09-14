@@ -6,15 +6,13 @@ import "./Career.scss";
 const CareerContainer = () => {
   return (
     <div className="careerContainer">
-      <div className="careerHeader">
-        <u>Career Summary</u>
-      </div>
+      <u className="careerContainer__Header">
+        Career Summary
+      </u>
       <div className="careerInnerContainer">
         <div className="professionalCareer">
-          <span>
           <BsBriefcase size="5em"/>
           <p>Summary of professional career</p>
-          </span>
         </div>
         <div className="container">
           <div className="careerCover">
@@ -30,7 +28,7 @@ const CareerContainer = () => {
             <div className="career3">
               <span>
               <FaTools size="4em"/>
-              <p>Has 3 years of Professional expertise in variety of fontend, backend and fullstack technologies</p>
+              <p>experience in working on variety of frontend, backend and fullstack technologies</p>
               </span>
               <button>Read More</button>
             </div>
