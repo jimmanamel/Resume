@@ -2,6 +2,7 @@ import { FaUserGraduate, FaTools } from "react-icons/fa";
 import { BsBriefcase } from "react-icons/bs";
 
 import "./Career.scss";
+import FlipCard from "./FlipCard";
 
 const CareerContainer = () => {
   return (
@@ -10,10 +11,7 @@ const CareerContainer = () => {
         Career Summary
       </u>
       <div className="careerInnerContainer">
-        <div className="professionalCareer">
-          <BsBriefcase size="5em"/>
-          <p>Summary of professional career</p>
-        </div>
+        <FlipCard/>
         <div className="container">
           <div className="careerCover">
             <div className="career2">
