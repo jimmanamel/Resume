@@ -16,6 +16,7 @@ const Navbar = ({ isNavBarOpen, setIsNavBarOpen, isDesktop }) => {
   }, [location]);
 
   const navItem = (navLink, navName) => {
+    console.log(activeRoute , navLink)
     return (
       <span
         className={
@@ -30,10 +31,6 @@ const Navbar = ({ isNavBarOpen, setIsNavBarOpen, isDesktop }) => {
         </Link>
       </span>
     );
-  };
-
-  const navMapper = () => {
-    return;
   };
 
   return (

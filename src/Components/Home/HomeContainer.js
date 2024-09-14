@@ -17,10 +17,10 @@ const HomeContainer = () => {
       </div>
       <div className="textContainer">
         <p className="name">Jim Joseph</p>
-        <p className="designation">
+        <div className="designation">
           Software&nbsp;
-          <div className="designation__type">Developer & Designer</div>
-        </p>
+          <p className="designation__type">Developer & Designer</p>
+        </div>
 
         <p className="content">
           An experienced Software developer with 4 years of professional
