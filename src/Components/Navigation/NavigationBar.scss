@@ -63,10 +63,9 @@ $transition-ease: ease;
     border: 3px solid #35a835;
   }
 
-
   a {
     text-decoration: none;
-    color: black;
+    color: rgb(132, 129, 129);
   }
 }
 
@@ -94,6 +93,10 @@ $transition-ease: ease;
     span {
       padding: 5px 10px;
       margin: 15px;
+    }
+
+    a {
+      color: rgb(0, 0, 0);
     }
 
   }

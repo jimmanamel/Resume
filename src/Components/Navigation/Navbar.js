@@ -15,8 +15,12 @@ const Navbar = ({ isNavBarOpen, setIsNavBarOpen, isDesktop }) => {
     setActiveRoute(location.pathname);
   }, [location]);
 
+  const changeRoute=(navLink)=>{
+    setActiveRoute(navLink)
+    if(isNavBarOpen&&!isDesktop) setIsNavBarOpen(!isNavBarOpen)
+  }
+
   const navItem = (navLink, navName) => {
-    console.log(activeRoute , navLink)
     return (
       <span
         className={
@@ -26,7 +30,7 @@ const Navbar = ({ isNavBarOpen, setIsNavBarOpen, isDesktop }) => {
         }
         key={navLink + navName}
       >
-        <Link to={navLink} onClick={() => setActiveRoute(navLink)}>
+        <Link to={navLink} onClick={()=>changeRoute(navLink)}>
           {navName}
         </Link>
       </span>
