@@ -17,9 +17,9 @@ const App=()=> {
         <Routes>
           <Route>
             <Route path="/Resume" element={<HomeContainer />}/>
-            <Route path="/Career" element={<CareerContainer />}/>
-            <Route path="/Projects" element={<ProjectsContainer />}/>
-            <Route path="/Contacts" element={<ContactsContainer />}/>
+            <Route path="/Resume/Career" element={<CareerContainer />}/>
+            <Route path="/Resume/Projects" element={<ProjectsContainer />}/>
+            <Route path="/Resume/Contacts" element={<ContactsContainer />}/>
           </Route>
         </Routes>
     </MediaQueryProvider>

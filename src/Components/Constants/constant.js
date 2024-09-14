@@ -1,8 +1,8 @@
 const navbarMapper = {
   "/Resume": "Home",
-  "/Career": "Career",
-  "/Projects": "Projects",
-  "/Contacts": "Contacts",
+  "/Resume/Career": "Career",
+  "/Resume/Projects": "Projects",
+  "/Resume/Contacts": "Contacts",
 };
 
 const tempProjects = [
