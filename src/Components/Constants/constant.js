@@ -1,5 +1,5 @@
 const navbarMapper = {
-  "/Resume": "Home",
+  "/Resume/": "Home",
   "/Resume/Career": "Career",
   "/Resume/Projects": "Projects",
   "/Resume/Contacts": "Contacts",

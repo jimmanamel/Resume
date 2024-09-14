@@ -16,7 +16,7 @@ const App=()=> {
       <NavbarContainer />
         <Routes>
           <Route>
-            <Route path="/Resume" element={<HomeContainer />}/>
+            <Route path="/Resume/" element={<HomeContainer />}/>
             <Route path="/Resume/Career" element={<CareerContainer />}/>
             <Route path="/Resume/Projects" element={<ProjectsContainer />}/>
             <Route path="/Resume/Contacts" element={<ContactsContainer />}/>
