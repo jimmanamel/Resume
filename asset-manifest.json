@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Resume/static/css/main.9a31998b.css",
+    "main.css": "/Resume/static/css/main.a5824362.css",
     "main.js": "/Resume/static/js/main.b35f2c4d.js",
     "static/js/787.9c115b09.chunk.js": "/Resume/static/js/787.9c115b09.chunk.js",
     "static/media/Edited_blackshirt.png": "/Resume/static/media/Edited_blackshirt.d9321970a635a870ac67.png",
@@ -10,12 +10,12 @@
     "static/media/Poppins-SemiBold.ttf": "/Resume/static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
     "static/media/Poppins-Bold.ttf": "/Resume/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
     "index.html": "/Resume/index.html",
-    "main.9a31998b.css.map": "/Resume/static/css/main.9a31998b.css.map",
+    "main.a5824362.css.map": "/Resume/static/css/main.a5824362.css.map",
     "main.b35f2c4d.js.map": "/Resume/static/js/main.b35f2c4d.js.map",
     "787.9c115b09.chunk.js.map": "/Resume/static/js/787.9c115b09.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9a31998b.css",
+    "static/css/main.a5824362.css",
     "static/js/main.b35f2c4d.js"
   ]
 }
