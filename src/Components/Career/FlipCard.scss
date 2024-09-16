@@ -8,7 +8,6 @@
   transition: transform 0.6s ease-in-out;
   transform-style: preserve-3d;
   padding-bottom: 20px;
-  cursor: pointer;
 
   &__inner {
     position: relative;
@@ -83,6 +82,7 @@
     width: 280px;
     height: 330px;
     margin-top: 100px;
+    cursor: pointer;
 
     &__front {
       font-weight: 700;
