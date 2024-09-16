@@ -2,8 +2,12 @@ import { FaUserGraduate, FaTools } from "react-icons/fa";
 
 import "./Career.scss";
 import FlipCard from "./FlipCard";
+import { useMediaQueryContext } from "../../MediaQueryContext";
 
 const CareerContainer = () => {
+
+  const { isDesktop } = useMediaQueryContext();
+
   return (
     <div className="careerContainer">
       <u className="careerContainer__Header">
@@ -15,7 +19,7 @@ const CareerContainer = () => {
           <div className="careerCover">
             <div className="career2">
               <span>
-              <FaUserGraduate size="4em"/>
+              <FaUserGraduate size={isDesktop?"6em":"4em"} />
               <p>B.Tech graduate in computer science and engineering, from CEC, in the year of 2020</p>
               </span>
               <button>Read More</button>
@@ -24,7 +28,7 @@ const CareerContainer = () => {
           <div className="careerCover">
             <div className="career3">
               <span>
-              <FaTools size="4em"/>
+              <FaTools size={isDesktop?"6em":"4em"} />
               <p>experience in working on variety of frontend, backend and fullstack technologies</p>
               </span>
               <button>Read More</button>
