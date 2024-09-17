@@ -6,7 +6,7 @@ const navbarMapper = {
 };
 
 const cards = [
-  { id: 1, imgSrc: "image1.jpg", content: "Card 1" },
+  { id: 1, imgSrc: 'C:/Users/Jim/Resume/src/Images/Resume.png', content: "Resume Website" },
   { id: 2, imgSrc: "image2.jpg", content: "Card 2" },
   { id: 3, imgSrc: "image3.jpg", content: "Card 3" },
   { id: 4, imgSrc: "image4.jpg", content: "Card 4" },

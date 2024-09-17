@@ -151,6 +151,7 @@
     }
 
     @media (min-width: 768px) {
+        width: 90%;
         &__cards {
             grid-template-columns: repeat(3, 1fr); // 3 columns on desktop
             grid-auto-rows: 320px; // Adjust the height as needed for desktop
