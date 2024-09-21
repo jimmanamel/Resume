@@ -1,0 +1,14 @@
+.contactsContainer{
+    display: flex;
+    margin: 100px;
+    border: 20px;
+    background: linear-gradient(to right, rgb(255, 255, 255) 65%, #08ffff 35%);
+
+    &__forms{
+        width: 60%;
+    }
+
+    &__map{
+        width: 40%;
+    }
+}
