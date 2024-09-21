@@ -1,12 +1,54 @@
 import "./Contacts.scss";
+import { useLoadScript } from "@react-google-maps/api";
+import MapComponent from "./MapComponenet";
+import { FiPhoneCall } from "react-icons/fi";
+import { IoMailOpenOutline } from "react-icons/io5";
+import { useMediaQueryContext } from "../../MediaQueryContext";
 
 const ContactsContainer = () => {
+  const { isLoaded } = useLoadScript({
+    googleMapsApiKey: "", // Add your API key
+  });
+
+  const { isDesktop } = useMediaQueryContext();
   return (
     <div className="contactsContainer">
-      <div className="contactsContainer__forms">
-        <h1>Get in touch</h1>
+      <div className="contactsContainer__contactsTop">
+        <div className="contactsContainer__formHolder">
+          <div className="contactsContainer__heading">
+            Get in&nbsp;<p>touch</p>
+          </div>
+          <p className="contactsContainer__subHeading">
+            Shoot a message I will respond as soon as possible
+          </p>
+          <div className="contactsContainer__form">
+            <input type="text" name="Name" placeholder="Name" />
+            <input type="email" name="Email" placeholder="Email" />
+            <input
+              type="text"
+              name="YourMessage"
+              placeholder="Type your message"
+            />
+            <button className="contactsContainer__button" name="shoot">
+              Shoot
+            </button>
+          </div>
+        </div>
+        {isLoaded ? <MapComponent /> : null}
       </div>
-      <div className="contactsContainer__map">map</div>
+      <span className="contactsContainer__contactsBottom">
+        <FiPhoneCall size={isDesktop?40:20} />
+        <div className="contactsContainer__phoneHolder">
+          <p>Phone</p>
+          <p>860651595</p>
+        </div>
+        <div class="contactsContainer__borderSeparator" />
+        <IoMailOpenOutline size={isDesktop?45:22} />
+        <div className="contactsContainer__emailHolder">
+          <p>Email</p>
+          <p>jimmanamel@gmail.com</p>
+        </div>
+      </span>
     </div>
   );
 };

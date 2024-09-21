@@ -1,14 +1,153 @@
-.contactsContainer{
-    display: flex;
-    margin: 100px;
-    border: 20px;
-    background: linear-gradient(to right, rgb(255, 255, 255) 65%, #08ffff 35%);
+.contactsContainer {
+    margin: 20px 40px;
+    font-family: poppins;
 
-    &__forms{
-        width: 60%;
+    &__contactsTop {
+        padding: 30px;
+        border: 20px;
+        background: linear-gradient(to bottom, rgb(255, 255, 255) 65%, #08ffff 35%);
+        border-radius: 10px;
     }
 
-    &__map{
+    &__heading {
+        display: flex;
+        font-size: 20px;
+        font-weight: 600;
+
+        p {
+            margin: 0;
+            color: #05cbcb;
+        }
+    }
+
+    &__subHeading {
+        font-size: 10px;
+        margin: 0;
+        font-weight: 500;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__contactsBottom {
+        display: flex;
+        width: 320px;
+        padding: 10px;
+    }
+
+    &__borderSeparator {
+        width: 2px;
+        height: 20px;
+        background-color: #000000;
+        margin: 5px 15px;
+    }
+
+    &__phoneHolder,
+    &__emailHolder {
+        display: flex;
+        flex-direction: column;
+
+        p:first-of-type {
+            font-weight: 500;
+        }
+
+        p {
+            margin: 0 10px;
+            font-size: 10px;
+        }
+    }
+
+    input {
+        padding: 15px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 10px;
+        transition: border-color 0.3s;
+        margin: 8px 0px;
+
+        &::placeholder {
+            font-family: poppins;
+        }
+
+        &:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+    }
+
+    button {
+        background-color: #05cbcb;
+        margin: 40px 0px;
+        padding: 10px;
         width: 40%;
+        border: none;
+        border-radius: 40px;
+        font-size: 16px;
+        font-weight: 600;
+        color: white;
+    }
+}
+
+@media(min-width: 1024px){
+    .contactsContainer {
+        margin: 100px 200px;
+    
+        &__contactsTop {
+            display: flex;
+            padding: 110px 0px;
+            background: linear-gradient(to right, rgb(255, 255, 255) 65%, #08ffff 35%);
+            border-radius: 30px;
+            justify-content: space-around;
+        }
+    
+        &__heading {
+            font-size: 50px;
+        }
+    
+        &__subHeading {
+            font-size: 16px;
+        }
+    
+        &__formHolder {
+            text-align: left;
+            padding: 20px;
+        }
+    
+        &__contactsBottom {
+            text-align: start;
+            width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    
+        &__borderSeparator {
+            height: 35px;
+            margin: 8px 30px;
+        }
+    
+        &__phoneHolder,
+        &__emailHolder {
+            display: flex;
+            flex-direction: column;
+    
+            p:first-of-type {
+                font-weight: bold;
+            }
+    
+            p {
+                font-size: 16px;
+            }
+        }
+    
+        input {
+            font-size: 18px;
+        }
+    
+        button {
+            width: 50%;
+            font-size: 30px;
+        }
     }
 }
