@@ -1,6 +1,8 @@
 .projectContainer {
     margin: 25px;
     background-color: #fff;
+    border-radius: 20px;
+    font-family: poppins;
 
     &__HeaderSection {
         display: flex;
@@ -31,15 +33,17 @@
 
 
     @media (min-width: 1024px) {
+        margin: 30px;
 
         &__header {
             width: 85%;
-            padding: 0px 15px;
+            padding: 25px 15px 0px 15px;
         }
 
         &__orderSelector {
             width: 15%;
             text-align: center;
+            margin-top: 25px;
         }
     }
 }

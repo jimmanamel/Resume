@@ -92,38 +92,39 @@
 
 @media(min-width: 1024px){
     .contactsContainer {
-        margin: 100px 200px;
+        margin: 60px 100px 10px 100px;
     
         &__contactsTop {
             display: flex;
-            padding: 110px 0px;
+            padding: 20px 0px;
             background: linear-gradient(to right, rgb(255, 255, 255) 65%, #08ffff 35%);
             border-radius: 30px;
             justify-content: space-around;
         }
     
         &__heading {
-            font-size: 50px;
+            padding-top: 25px;
+            font-size: 40px;
         }
     
         &__subHeading {
-            font-size: 16px;
+            font-size: 12px;
         }
     
         &__formHolder {
             text-align: left;
-            padding: 20px;
+            padding: 10px;
         }
     
         &__contactsBottom {
             text-align: start;
-            width: 500px;
+            width: 380px;
             margin: 0 auto;
             padding: 20px;
         }
     
         &__borderSeparator {
-            height: 35px;
+            height: 25px;
             margin: 8px 30px;
         }
     
@@ -137,17 +138,18 @@
             }
     
             p {
-                font-size: 16px;
+                font-size: 12px;
             }
         }
     
         input {
-            font-size: 18px;
+            padding: 10px;
+            font-size: 14px;
         }
     
         button {
-            width: 50%;
-            font-size: 30px;
+            width: 40%;
+            font-size: 15px;
         }
     }
 }

@@ -6,7 +6,7 @@ const ProjectsContainer = () => {
   return (
     <div className="projectContainer">
       <div className="projectContainer__HeaderSection">
-        <h2 className="projectContainer__header">Projects</h2>
+        <h2 className="projectContainer__header">Case Study</h2>
         <span className="projectContainer__orderSelector">
           <select name="order" id="Projects">
             <option value="Recent">Recent</option>

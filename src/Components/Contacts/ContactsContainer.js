@@ -16,7 +16,7 @@ const ContactsContainer = () => {
       <div className="contactsContainer__contactsTop">
         <div className="contactsContainer__formHolder">
           <div className="contactsContainer__heading">
-            Get in&nbsp;<p>touch</p>
+            Get in&nbsp;<p>touch!</p>
           </div>
           <p className="contactsContainer__subHeading">
             Shoot a message I will respond as soon as possible

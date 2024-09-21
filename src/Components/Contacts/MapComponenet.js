@@ -33,8 +33,8 @@ function MapComponent() {
 
   const { isDesktop } = useMediaQueryContext();
 
-  const width = isDesktop?"700px":"240px";
-  const height = isDesktop?"450px":"200px";
+  const width = isDesktop?"550px":"240px";
+  const height = isDesktop?"400px":"200px";
   const margin = isDesktop?"5px":"0px";
 
   const handleActiveMarker = (marker) => {
