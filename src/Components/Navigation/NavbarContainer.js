@@ -4,9 +4,9 @@ import { HiOutlineMenuAlt2 } from "react-icons/hi";
 
 import { useMediaQueryContext } from "../../MediaQueryContext";
 import Navbar from "./Navbar";
-import SearchBar from "./SearchBar";
 
 import "./NavigationBar.scss";
+import { handleResumeDownload } from "../Helper/helper";
 
 const NavbarContainer = () => {
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
@@ -17,7 +17,6 @@ const NavbarContainer = () => {
 
   return (
     <div className="navContainer">
-      <SearchBar />
       {!isDesktop && (
         <div className="navContainer__menuButton">
         <HiOutlineMenuAlt2
@@ -29,7 +28,7 @@ const NavbarContainer = () => {
       )}
       <Navbar isNavBarOpen={isNavBarOpen} setIsNavBarOpen={setIsNavBarOpen} isDesktop={isDesktop} />
       {isDesktop && (
-        <div className="downloadIcon">
+        <div className="downloadIcon" onClick={handleResumeDownload}>
           <BsDownload size="2em" />
         </div>
       )}

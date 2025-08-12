@@ -9,21 +9,8 @@ $transition-ease: ease;
   border-radius: 0 0 20px 20px;
 
   &__menuButton {
-    width: 15%;
-    text-align: center;
-  }
-}
-
-.searchContainer {
-  width: 85%;
-  padding-left: 40px;
-  display: flex;
-
-  input {
-    margin-left: 20px;
-    border: 3px solid #6765ec;
-    border-radius: 10px;
-    width: 200px;
+    width: 90%;
+    text-align: end;
   }
 }
 
@@ -74,14 +61,10 @@ $transition-ease: ease;
     height: 89px;
   }
 
-  .searchContainer {
-    width: 55%;
-  }
-
   .navBar {
     display: flex;
-    width: 35%;
-    justify-content: space-around;
+    width: 85%;
+    justify-content: end;
 
 
     .selected {
@@ -102,9 +85,10 @@ $transition-ease: ease;
   }
 
   .downloadIcon {
-    width: 10%;
+    width: 15%;
     padding-left: 20px;
     text-align: center;
+    cursor: pointer;
   }
 
   nav {

@@ -21,18 +21,29 @@ const ContactsContainer = () => {
           <p className="contactsContainer__subHeading">
             Shoot a message I will respond as soon as possible
           </p>
-          <div className="contactsContainer__form">
-            <input type="text" name="Name" placeholder="Name" />
-            <input type="email" name="Email" placeholder="Email" />
-            <input
-              type="text"
-              name="YourMessage"
-              placeholder="Type your message"
-            />
-            <button className="contactsContainer__button" name="shoot">
-              Shoot
-            </button>
-          </div>
+          <form
+            method="post"
+            action="https://formsubmit.co/jimmanamel@gmail.com"
+            enctype="multipart/form-data"
+          >
+            <div className="contactsContainer__form">
+              <input type="text" name="Name" placeholder="Name" />
+              <input type="email" name="Email" placeholder="Email" />
+              <input
+                type="text"
+                name="YourMessage"
+                placeholder="Type your message"
+              />
+              <input type="hidden" name="_blacklist" value="spammy pattern, banned term, phrase"></input>
+              <button
+                className="contactsContainer__button"
+                name="shoot"
+                type="submit "
+              >
+                Shoot
+              </button>
+            </div>
+          </form>
         </div>
         {isLoaded ? <MapComponent /> : null}
       </div>

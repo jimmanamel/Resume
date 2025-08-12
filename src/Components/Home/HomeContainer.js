@@ -8,6 +8,7 @@ import { BiLogoWhatsapp } from "react-icons/bi";
 
 import dp from "../../Images/Edited_blackshirt.png";
 import "./Home.scss";
+import { handleResumeDownload } from "../Helper/helper";
 
 const HomeContainer = () => {
   return (
@@ -27,23 +28,53 @@ const HomeContainer = () => {
           expertise in working with Accenture, Wipro & Apple.
         </p>
         <section>
-          <span>
-            <AiOutlineLinkedin />
-          </span>
-          <span>
-            <AiOutlineFacebook />
-          </span>
-          <span>
-            <AiOutlineInstagram />
-          </span>
-          <span>
-            <CiTwitter />
-          </span>
-          <span>
-            <BiLogoWhatsapp />
-          </span>
+          <a
+            href="https://www.linkedin.com/in/jim-joseph-96940b175/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>
+              <AiOutlineLinkedin />
+            </span>
+          </a>
+          <a
+            href="https://www.facebook.com/login.php/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>
+              <AiOutlineFacebook />
+            </span>
+          </a>
+          <a
+            href="https://www.instagram.com/accounts/login/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>
+              <AiOutlineInstagram />
+            </span>
+          </a>
+          <a
+            href="https://x.com/?lang=en-in"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>
+              <CiTwitter />
+            </span>
+          </a>
+          <a
+            href="https://web.whatsapp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>
+              <BiLogoWhatsapp />
+            </span>
+          </a>
         </section>
-        <button>Download CV</button>
+        <button onClick={handleResumeDownload}>Download CV</button>
       </div>
     </div>
   );
