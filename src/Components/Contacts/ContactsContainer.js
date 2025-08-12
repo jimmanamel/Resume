@@ -1,6 +1,6 @@
 import "./Contacts.scss";
 import { useLoadScript } from "@react-google-maps/api";
-import MapComponent from "./MapComponenet";
+import MapComponent from "./MapComponent";
 import { FiPhoneCall } from "react-icons/fi";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { useMediaQueryContext } from "../../MediaQueryContext";
@@ -37,13 +37,13 @@ const ContactsContainer = () => {
         {isLoaded ? <MapComponent /> : null}
       </div>
       <span className="contactsContainer__contactsBottom">
-        <FiPhoneCall size={isDesktop?40:20} />
+        <FiPhoneCall size={isDesktop ? 40 : 20} />
         <div className="contactsContainer__phoneHolder">
           <p>Phone</p>
           <p>860651595</p>
         </div>
         <div class="contactsContainer__borderSeparator" />
-        <IoMailOpenOutline size={isDesktop?45:22} />
+        <IoMailOpenOutline size={isDesktop ? 45 : 22} />
         <div className="contactsContainer__emailHolder">
           <p>Email</p>
           <p>jimmanamel@gmail.com</p>

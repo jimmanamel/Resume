@@ -1,49 +1,50 @@
 .projectContainer {
-    margin: 25px;
-    background-color: #fff;
-    border-radius: 20px;
-    font-family: poppins;
+  margin: 25px;
+  background-color: #fff;
+  border-radius: 20px;
+  font-family: poppins;
 
-    &__HeaderSection {
-        display: flex;
-        border-bottom: 1px solid black;
-        margin: 15px;
-    }
+  &__HeaderSection {
+    display: flex;
+    border-bottom: 1px solid black;
+    margin: 15px;
+  }
+
+  &__header {
+    width: 65%;
+  }
+
+  &__orderSelector {
+    width: 35%;
+    align-content: space-around;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  select {
+    border: none;
+  }
+
+  span {
+    padding: 0px 2px;
+  }
+}
+
+@media (min-width: 768px) {
+  .projectContainer {
+    margin: 30px;
 
     &__header {
-        width: 65%;
+      width: 85%;
+      padding: 25px 15px 0px 15px;
     }
 
     &__orderSelector {
-        width: 35%;
-        align-content: space-around;
+      width: 15%;
+      text-align: center;
+      margin-top: 25px;
     }
-
-    h2 {
-        margin: 0;
-    }
-    
-    select {
-        border: none;
-    }
-    
-    span {
-        padding: 0px 2px;
-    }
-
-
-    @media (min-width: 1024px) {
-        margin: 30px;
-
-        &__header {
-            width: 85%;
-            padding: 25px 15px 0px 15px;
-        }
-
-        &__orderSelector {
-            width: 15%;
-            text-align: center;
-            margin-top: 25px;
-        }
-    }
+  }
 }

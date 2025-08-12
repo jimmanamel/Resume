@@ -8,13 +8,14 @@ $transition-ease: ease;
   align-items: center;
   border-radius: 0 0 20px 20px;
 
-  &__menuButton{
-    padding-left: 130px;
+  &__menuButton {
+    width: 15%;
+    text-align: center;
   }
 }
 
 .searchContainer {
-  width: 40%;
+  width: 85%;
   padding-left: 40px;
   display: flex;
 
@@ -27,28 +28,27 @@ $transition-ease: ease;
 }
 
 .navBar {
-  width: 20%;
   font-family: "poppins";
   font-weight: 600;
   margin: 0%;
 
-  &__itemContainer{
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  top: 0px;
-  left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.9);
-  text-align: center;
-  border-radius: 0 0 20px 20px;
+  &__itemContainer {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    border-radius: 0 0 20px 20px;
   }
 
-  &__item{
+  &__item {
     display: block;
   }
 
-  &__menuClose{
+  &__menuClose {
     padding: 5px 25px;
     text-align: right;
   }
@@ -75,14 +75,14 @@ $transition-ease: ease;
   }
 
   .searchContainer {
-    width: 52%;
+    width: 55%;
   }
 
   .navBar {
     display: flex;
-    width: 30%;
+    width: 35%;
     justify-content: space-around;
-    
+
 
     .selected {
       padding: 5px 10px;
@@ -91,7 +91,7 @@ $transition-ease: ease;
     }
 
     span {
-      padding: 5px 10px;
+      padding: 5px 0px;
       margin: 15px;
     }
 
@@ -102,7 +102,8 @@ $transition-ease: ease;
   }
 
   .downloadIcon {
-    width: 18%;
+    width: 10%;
+    padding-left: 20px;
     text-align: center;
   }
 

@@ -8,8 +8,8 @@ import "./Carousel.scss";
 
 const Carousel = () => {
   const [pageIndex, setPageIndex] = useState(0);
-  const { isDesktop } = useMediaQueryContext();
-  const cardsPerPage = isDesktop ? 6 : 3;
+  const { isMobile } = useMediaQueryContext();
+  const cardsPerPage = isMobile ? 3 : 6;
 
   const totalPages = Math.ceil(cards.length / cardsPerPage);
   const startIndex = pageIndex * cardsPerPage;
@@ -43,11 +43,11 @@ const Carousel = () => {
         <div className="card-carousel__cards">
           {currentPageCards.map((card) => (
             <div key={card.id} className="card-carousel__card">
-              <img
+              {/* <img
                 src={card.imgSrc}
                 alt={card.content}
                 className="card-carousel__card-img"
-              />
+              /> */}
               <div className="card-carousel__card-overlay">
                 <div className="card-carousel__card-text">{card.content}</div>
               </div>
