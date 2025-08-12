@@ -23,7 +23,7 @@ const ContactsContainer = () => {
           </p>
           <form
             method="post"
-            action="https://formsubmit.co/jimmanamel@gmail.com"
+            action="https://formsubmit.co/9e7c76c7f41bfc1fae02361b85542d4a"
             enctype="multipart/form-data"
           >
             <div className="contactsContainer__form">
