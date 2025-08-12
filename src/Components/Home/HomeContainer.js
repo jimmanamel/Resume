@@ -24,7 +24,7 @@ const HomeContainer = () => {
         </div>
 
         <p className="content">
-          An experienced Software developer with 4 years of professional
+          An experienced Software developer with 5 years of professional
           expertise in working with Accenture, Wipro & Apple.
         </p>
         <section>
