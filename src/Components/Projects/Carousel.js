@@ -43,11 +43,11 @@ const Carousel = () => {
         <div className="card-carousel__cards">
           {currentPageCards.map((card) => (
             <div key={card.id} className="card-carousel__card">
-              {/* <img
+              <img
                 src={card.imgSrc}
                 alt={card.content}
                 className="card-carousel__card-img"
-              /> */}
+              />
               <div className="card-carousel__card-overlay">
                 <div className="card-carousel__card-text">{card.content}</div>
               </div>
