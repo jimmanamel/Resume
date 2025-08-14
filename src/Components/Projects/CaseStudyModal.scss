@@ -1,0 +1,33 @@
+// src/styles/CaseStudyModal.scss
+
+.case-study {
+  &__title {
+    margin-top: 0;
+    font-size: 24px;
+  }
+
+  &__description {
+    margin: 10px 0 20px;
+    font-size: 16px;
+  }
+
+  &__video {
+    margin-bottom: 16px;
+
+    video {
+      width: 100%;
+      border-radius: 6px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    color: #0366d6;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

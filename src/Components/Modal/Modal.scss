@@ -1,0 +1,38 @@
+// src/styles/Modal.scss
+
+.modal {
+  &__overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  &__content {
+    background: #fff;
+    padding: 24px;
+    border-radius: 10px;
+    max-width: 700px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  &__close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
