@@ -1,0 +1,58 @@
+$transition-duration: 0.5s;
+$transition-ease: ease;
+
+.navContainer {
+  background-color: rgb(217, 217, 217, 80%);
+  height: 89px;
+  display: flex;
+  align-items: center;
+  border-radius: 0 0 20px 20px;
+
+}
+
+.navBar {
+  display: flex;
+  width: 85%;
+  justify-content: end;
+  font-family: "poppins";
+  font-weight: 600;
+  margin: 0%;
+
+  &__item {
+    display: block;
+  }
+
+  .unselected {
+    border: 1px solid transparent;
+  }
+
+  .selected {
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid #35a835;
+    padding: 5px 10px;
+    margin: 15px;
+    border-radius: 20px;
+  }
+
+   span {
+      padding: 5px 0px;
+      margin: 15px;
+    }
+
+  a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }
+
+  .downloadIcon {
+    width: 15%;
+    padding-left: 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  nav {
+    text-align: right;
+  }
+}

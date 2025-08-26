@@ -4,20 +4,17 @@
   position: relative;
   width: 80%;
   margin: 0 auto;
-  //overflow: hidden;
 
   &__viewport {
     flex: 1;
-    //overflow: hidden;
   }
 
-  // Mobile first styles
   &__cards {
     display: grid;
     gap: 30px;
     grid-template-columns: 1fr; // 1 column on mobile
     grid-auto-rows: 250px; // Adjust the height as needed for mobile
-    transition: transform 0.3s ease;
+    justify-items: center;
   }
 
   &__card {
@@ -55,8 +52,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    opacity: 1;
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -181,6 +177,15 @@
     &__cards {
       grid-template-columns: repeat(3, 1fr); // 3 columns on desktop
       grid-auto-rows: 220px; // Adjust the height as needed for desktop
+    }
+
+    &__card-overlay {
+      opacity: 0; // Hidden by default on desktop
+      transition: opacity 0.3s ease;
+    }
+
+    &__card:hover .card-carousel__card-overlay {
+      opacity: 1; // Show overlay on hover for desktop
     }
 
     &__arrow--left {

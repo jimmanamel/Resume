@@ -5,4 +5,8 @@ const handleResumeDownload = () => {
   link.click();
 };
 
-export { handleResumeDownload };
+const normalizeRoute = (route) => {
+  return route.replace(/\/$/, "");
+}
+
+export { handleResumeDownload, normalizeRoute };

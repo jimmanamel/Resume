@@ -1,63 +1,44 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { IoIosCloseCircleOutline } from "react-icons/io";
 
-import { navbarMapper } from "../Constants/constant";
+import { menuItems } from "../Constants/constant";
 
-import "./NavigationBar.scss";
+import { normalizeRoute } from "../Helper/helper";
+import { handleResumeDownload } from "../Helper/helper";
+import { BsDownload } from "react-icons/bs";
 
-const Navbar = ({ isNavBarOpen, setIsNavBarOpen, isDesktop }) => {
-  const [activeRoute, setActiveRoute] = useState("Home");
+import "./Navbar.scss";
 
+const Navbar = ({ activeRoute, setActiveRoute }) => {
   const location = useLocation();
 
   useEffect(() => {
     setActiveRoute(location.pathname);
-  }, [location]);
+  }, [location, setActiveRoute]);
 
-  const changeRoute=(navLink)=>{
-    setActiveRoute(navLink)
-    if(isNavBarOpen&&!isDesktop) setIsNavBarOpen(!isNavBarOpen)
-  }
-
-  const navItem = (navLink, navName) => {
-    return (
-      <span
-        className={
-          activeRoute === navLink
-            ? "navBar__item selected"
-            : "navBar__item unselected"
-        }
-        key={navLink + navName}
-      >
-        <Link to={navLink} onClick={()=>changeRoute(navLink)}>
-          {navName}
-        </Link>
-      </span>
-    );
-  };
 
   return (
-    <nav className="navBar">
-      {isDesktop
-        ? Object.keys(navbarMapper).map((navElement) =>
-            navItem(navElement, navbarMapper[navElement])
-          )
-        : isNavBarOpen && (
-            <div className="navBar__itemContainer">
-              <div className="navBar__menuClose">
-                <IoIosCloseCircleOutline
-                  color="white"
-                  size={35}
-                  onClick={() => setIsNavBarOpen(!isNavBarOpen)}
-                />
-              </div>
-              {Object.keys(navbarMapper).map((navElement) =>
-                navItem(navElement, navbarMapper[navElement])
-              )}
-            </div>
-          )}
+    <div className="navContainer">
+      <nav className="navBar">
+      {menuItems.map((item) => (
+          <span
+            className={
+              normalizeRoute(activeRoute) === normalizeRoute(item.route)
+                ? "navBar__item selected"
+                : "navBar__item unselected"
+            }
+            key={item.route + item.label}
+          >
+            <Link to={item.route} onClick={() => setActiveRoute(item.route)}>
+              {item.label}
+            </Link>
+          </span>
+        ))}
     </nav>
+      <div className="downloadIcon" onClick={handleResumeDownload}>
+        <BsDownload size="2em" />
+      </div>
+    </div>
   );
 };
 

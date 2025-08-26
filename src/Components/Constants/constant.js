@@ -1,13 +1,14 @@
 import sentimentImg from "../../Images/senti3.png";
 import resumeImg from "../../Images/Resume.png";
 import login from "../../Images/login.avif";
+import { FiHome, FiBookOpen, FiBell, FiBookmark } from "react-icons/fi";
 
-const navbarMapper = {
-  "/Resume/": "Home",
-  "/Resume/Career": "Career",
-  "/Resume/Projects": "Projects",
-  "/Resume/Contacts": "Contacts",
-};
+const menuItems = [
+  { route: "/Resume/", icon: <FiHome />, label: "Home" },
+  { route: "/Resume/Career", icon: <FiBookOpen />, label: "Career" },
+  { route: "/Resume/Projects", icon: <FiBell />, label: "Projects" },
+  { route: "/Resume/Contacts", icon: <FiBookmark />, label: "Contacts" },
+];
 
 const comingSoonText = "Coming Soon... ";
 
@@ -31,4 +32,4 @@ const cards = [
   { id: 12, imgSrc: "", name: comingSoonText },
 ];
 
-export { navbarMapper, cards };
+export { menuItems, cards };
