@@ -1,13 +1,16 @@
 import sentimentImg from "../../Images/senti3.png";
 import resumeImg from "../../Images/Resume.png";
 import login from "../../Images/login.avif";
-import { FiHome, FiBookOpen, FiBell, FiBookmark } from "react-icons/fi";
+import { FiHome } from "react-icons/fi";
+import { MdWorkOutline } from "react-icons/md";
+import { GoProjectSymlink } from "react-icons/go";
+import { IoMdContacts } from "react-icons/io";
 
 const menuItems = [
   { route: "/Resume/", icon: <FiHome />, label: "Home" },
-  { route: "/Resume/Career", icon: <FiBookOpen />, label: "Career" },
-  { route: "/Resume/Projects", icon: <FiBell />, label: "Projects" },
-  { route: "/Resume/Contacts", icon: <FiBookmark />, label: "Contacts" },
+  { route: "/Resume/Career", icon: <MdWorkOutline />, label: "Career" },
+  { route: "/Resume/Projects", icon: <GoProjectSymlink />, label: "Projects" },
+  { route: "/Resume/Contacts", icon: <IoMdContacts />, label: "Contacts" },
 ];
 
 const comingSoonText = "Coming Soon... ";
@@ -24,12 +27,12 @@ const cards = [
   { id: 4, imgSrc: "", name: comingSoonText },
   { id: 5, imgSrc: "", name: comingSoonText },
   { id: 6, imgSrc: "", name: comingSoonText },
-  { id: 7, imgSrc: "", name: comingSoonText },
-  { id: 8, imgSrc: "", name: comingSoonText },
-  { id: 9, imgSrc: "", name: comingSoonText },
-  { id: 10, imgSrc: "", name: comingSoonText },
-  { id: 11, imgSrc: "", name: comingSoonText },
-  { id: 12, imgSrc: "", name: comingSoonText },
+  // { id: 7, imgSrc: "", name: comingSoonText },
+  // { id: 8, imgSrc: "", name: comingSoonText },
+  // { id: 9, imgSrc: "", name: comingSoonText },
+  // { id: 10, imgSrc: "", name: comingSoonText },
+  // { id: 11, imgSrc: "", name: comingSoonText },
+  // { id: 12, imgSrc: "", name: comingSoonText },
 ];
 
 export { menuItems, cards };
