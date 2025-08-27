@@ -1,83 +1,47 @@
-import {
-  AiOutlineLinkedin,
-  AiOutlineFacebook,
-  AiOutlineInstagram,
-} from "react-icons/ai";
-import { CiTwitter } from "react-icons/ci";
-import { BiLogoWhatsapp } from "react-icons/bi";
-
 import dp from "../../Images/Edited_blackshirt.png";
-import "./Home.scss";
 import { handleResumeDownload } from "../Helper/helper";
+import { socialLinks } from "../Constants/constant";
+import "./Home.scss";
 
-const HomeContainer = () => {
-  return (
-    <div className="homeContainer">
-      <div className="imageContainer">
-        <img className="centered-image" src={dp} alt="Not loaded" />
-      </div>
-      <div className="textContainer">
-        <p className="name">Jim Joseph</p>
-        <div className="designation">
-          Software&nbsp;
-          <p className="designation__type">Developer & Designer</p>
-        </div>
-
-        <p className="content">
-          An experienced Software developer with 5 years of professional
-          expertise in working with Accenture, Wipro & Apple.
-        </p>
-        <section>
-          <a
-            href="https://www.linkedin.com/in/jim-joseph-96940b175/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span>
-              <AiOutlineLinkedin />
-            </span>
-          </a>
-          <a
-            href="https://www.facebook.com/login.php/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span>
-              <AiOutlineFacebook />
-            </span>
-          </a>
-          <a
-            href="https://www.instagram.com/accounts/login/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span>
-              <AiOutlineInstagram />
-            </span>
-          </a>
-          <a
-            href="https://x.com/?lang=en-in"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span>
-              <CiTwitter />
-            </span>
-          </a>
-          <a
-            href="https://web.whatsapp.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span>
-              <BiLogoWhatsapp />
-            </span>
-          </a>
-        </section>
-        <button onClick={handleResumeDownload}>Download CV</button>
-      </div>
+const HomeContainer = () => (
+  <div className="home">
+    <div className="home__image-wrapper">
+      <img className="home__image" src={dp} alt="Profile" />
     </div>
-  );
-};
+
+    <div className="home__content">
+      <p className="home__name">Jim Joseph</p>
+
+      <p className="home__designation">
+        Software{" "}
+        <span className="home__designation-type">Developer & Designer</span>
+      </p>
+
+      <p className="home__description">
+        Experienced Software Developer with 5 years of expertise at Accenture,
+        Wipro & Apple.
+      </p>
+
+      <div className="home__socials">
+        {socialLinks.map(({ href, icon, label }) => (
+          <a
+            key={label}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={label}
+            className="home__social-link"
+          >
+            {icon}
+          </a>
+        ))}
+      </div>
+
+      <button className="home__button" onClick={handleResumeDownload}>
+        Download CV
+      </button>
+    </div>
+  </div>
+);
 
 export default HomeContainer;

@@ -19,37 +19,43 @@ const SidebarMenu = ({ activeRoute, setActiveRoute }) => {
   };
 
   return (
-    <div className="sidebar-wrapper">
-      <button className="menu-toggle" onClick={toggleMenu}>
+    <div className="sidebar">
+      <button className="sidebar__toggle" onClick={toggleMenu}>
         {open ? <FiX size={28} /> : <FiMenu size={28} />}
       </button>
 
-      <div className={`sidebar ${open ? "open" : ""}`}>
-        <div className="sidebar-header">
-          <img src={dp} alt="profile" className="profile-img" />
-          <div className="profile-info">
-            <h3>Jim Joseph</h3>
-            <p>Software Developer</p>
+      <div className={`sidebar__drawer ${open ? "sidebar__drawer--open" : ""}`}>
+        <div className="sidebar__header">
+          <img src={dp} alt="profile" className="sidebar__profile-img" />
+          <div className="sidebar__profile-info">
+            <h3 className="sidebar__name">Jim Joseph</h3>
+            <p className="sidebar__role">Software Developer</p>
           </div>
         </div>
-        <hr />
+        <hr className="sidebar__divider" />
 
-        <ul className="menu">
-          {menuItems.map((item) => (
-            <li
-              key={item.route}
-              className={
-                normalizeRoute(activeRoute) === normalizeRoute(item.route)
-                  ? "active"
-                  : ""
-              }
-            >
-              {item.icon}
-              <Link to={item.route} onClick={() => changeRoute(item.route)}>
-                {item.label}
-              </Link>
-            </li>
-          ))}
+        <ul className="sidebar__menu">
+          {menuItems.map((item) => {
+            const isActive =
+              normalizeRoute(activeRoute) === normalizeRoute(item.route);
+            return (
+              <li
+                key={item.route}
+                className={`sidebar__menu-item ${
+                  isActive ? "sidebar__menu-item--active" : ""
+                }`}
+              >
+                {item.icon}
+                <Link
+                  to={item.route}
+                  onClick={() => changeRoute(item.route)}
+                  className="sidebar__link"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>

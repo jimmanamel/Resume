@@ -1,7 +1,7 @@
-import React, { createContext, useContext } from "react";
+import { createContext, useContext, useMemo } from "react";
 import { useMediaQuery } from "react-responsive";
 
-const mediaQueryContext = createContext();
+const MediaQueryContext = createContext();
 
 export const MediaQueryProvider = ({ children }) => {
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
@@ -9,13 +9,18 @@ export const MediaQueryProvider = ({ children }) => {
     query: "(min-width: 768px) and (max-width: 1023px)",
   });
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
+
+  const value = useMemo(() => ({ isDesktop, isTablet, isMobile }), [
+    isDesktop,
+    isTablet,
+    isMobile,
+  ]);
+
   return (
-    <mediaQueryContext.Provider value={{ isDesktop, isTablet, isMobile }}>
+    <MediaQueryContext.Provider value={value}>
       {children}
-    </mediaQueryContext.Provider>
+    </MediaQueryContext.Provider>
   );
 };
 
-export const useMediaQueryContext = () => {
-  return useContext(mediaQueryContext);
-};
+export const useMediaQueryContext = () => useContext(MediaQueryContext);

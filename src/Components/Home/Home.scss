@@ -1,121 +1,120 @@
-.homeContainer {
-    font-family: "poppins";
-    text-align: center;
+.home {
+  font-family: "poppins";
+  text-align: center;
+
+  &__image-wrapper {
+    position: relative;
   }
 
-  .centered-image {
+  &__image {
     border-radius: 50%;
     width: 300px;
     height: 300px;
   }
 
-  .textContainer {
-
-    button {
-        background-color: #66fa66;
-        border: none;
-        border-radius: 20px;
-        width: 170px;
-        height: 40px;
-        font-size: medium;
-        margin-left: 25px;
-        margin: 10px;
-    }
-    a{
-      color: black;
-    }
-    span {
-        display: inline-block;
-        background-color: #d6d6d6;
-        font-size: 25px;
-        margin: 10px;
-        height: 29px;
-        border-radius: 5px;
-        cursor: pointer;
-      }
+  &__content {
+    margin-top: 1rem;
   }
 
-  .name {
+  &__name {
     font-size: 50px;
     font-weight: 500;
-    margin: 0px;
+    margin: 0;
   }
 
-  .designation {
+  &__designation {
     font-size: 18px;
     font-weight: 500;
-    margin: 0px;
-    &__type{
+    margin: 0;
+
+    &-type {
       color: #66fa66;
       display: inline;
     }
   }
 
-  .content {
+  &__description {
     font-size: 14px;
-    padding: 0px 30px;
+    padding: 0 30px;
   }
 
+  &__socials {
+    margin: 1rem;
+  }
+
+  &__social-link {
+    display: inline-block;
+    background-color: #d6d6d6;
+    font-size: 25px;
+    margin: 10px;
+    height: 29px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+  }
+
+  &__button {
+    background-color: #66fa66;
+    border: none;
+    border-radius: 20px;
+    width: 170px;
+    height: 40px;
+    font-size: medium;
+    margin: 10px;
+    cursor: pointer;
+  }
+}
+
 @media (min-width: 1024px) {
-  .homeContainer {
+  .home {
     display: flex;
     align-items: center;
     text-align: unset;
-    padding: 20px 0px;
-  }
+    padding: 20px 0;
 
-  .imageContainer {
-    position: relative;
-    width: 55%;
-    padding: 0px 10px;
-  }
+    &__image-wrapper {
+      width: 55%;
+      padding: 0 10px;
+    }
 
-  .centered-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 553px;
-    height: 550px;
-    border-radius: 15%;
-  }
+    &__image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 553px;
+      height: 550px;
+      border-radius: 15%;
+    }
 
-  .textContainer {
-    width: 45%;
-    margin-top: 100px;
+    &__content {
+      width: 45%;
+      margin-top: 100px;
+    }
 
-    button {
+    &__button {
       width: 200px;
       height: 50px;
       font-size: large;
       margin-left: 25px;
     }
-    span {
-        margin-left: 25px;
-      }
-  }
 
-  .name {
-    font-size: 70px;
-    font-weight: 600;
-    padding-left: 25px;
-  }
+    &__name {
+      font-size: 70px;
+      font-weight: 600;
+      padding-left: 25px;
+    }
 
-  .designation {
-    font-size: 35px;
-    font-weight: 400;
-    padding-left: 25px;
-  }
+    &__designation {
+      font-size: 35px;
+      font-weight: 400;
+      padding-left: 25px;
+    }
 
-  .content {
-    font-size: 20px;
-    max-width: 500px;
-    padding-left: 25px;
-  }
-
-  .lowerCell {
-    padding-left: 25px;
-
-   
+    &__description {
+      font-size: 20px;
+      max-width: 500px;
+      padding-left: 25px;
+    }
   }
 }

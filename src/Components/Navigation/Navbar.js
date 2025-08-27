@@ -1,12 +1,8 @@
 import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-
 import { menuItems } from "../Constants/constant";
-
-import { normalizeRoute } from "../Helper/helper";
-import { handleResumeDownload } from "../Helper/helper";
+import { normalizeRoute, handleResumeDownload } from "../Helper/helper";
 import { BsDownload } from "react-icons/bs";
-
 import "./Navbar.scss";
 
 const Navbar = ({ activeRoute, setActiveRoute }) => {
@@ -14,28 +10,33 @@ const Navbar = ({ activeRoute, setActiveRoute }) => {
 
   useEffect(() => {
     setActiveRoute(location.pathname);
-  }, [location, setActiveRoute]);
-
+  }, [location.pathname, setActiveRoute]);
 
   return (
-    <div className="navContainer">
-      <nav className="navBar">
-      {menuItems.map((item) => (
-          <span
-            className={
-              normalizeRoute(activeRoute) === normalizeRoute(item.route)
-                ? "navBar__item selected"
-                : "navBar__item unselected"
-            }
-            key={item.route + item.label}
-          >
-            <Link to={item.route} onClick={() => setActiveRoute(item.route)}>
-              {item.label}
-            </Link>
-          </span>
-        ))}
-    </nav>
-      <div className="downloadIcon" onClick={handleResumeDownload}>
+    <div className="navbar">
+      <nav className="navbar__list">
+        {menuItems.map(({ route, label }) => {
+          const isActive =
+            normalizeRoute(activeRoute) === normalizeRoute(route);
+
+          return (
+            <span
+              className={`navbar__item ${isActive && "navbar__item--selected"}`}
+              key={route + label}
+            >
+              <Link
+                to={route}
+                onClick={() => setActiveRoute(route)}
+                className="navbar__link"
+              >
+                {label}
+              </Link>
+            </span>
+          );
+        })}
+      </nav>
+
+      <div className="navbar__icon" onClick={handleResumeDownload}>
         <BsDownload size="2em" />
       </div>
     </div>
