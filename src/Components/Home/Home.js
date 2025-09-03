@@ -3,7 +3,7 @@ import { handleResumeDownload } from "../Helper/helper";
 import { socialLinks } from "../Constants/constant";
 import "./Home.scss";
 
-const HomeContainer = () => (
+const Home = () => (
   <div className="home">
     <div className="home__image-wrapper">
       <img className="home__image" src={dp} alt="Profile" />
@@ -44,4 +44,4 @@ const HomeContainer = () => (
   </div>
 );
 
-export default HomeContainer;
+export default Home;
