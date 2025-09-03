@@ -1,118 +1,248 @@
-.careerContainer {
-  width: 100%;
+$primary-color: #0066ff;
+$highlight-color: #007bff;
+$bg-light: #f5f8ff;
+$services-bg: #eaf4ff;
+$text-dark: #222;
+$text-muted: #555;
+$font: "Poppins", sans-serif;
+$tablet: 768px;
+$desktop: 1200px;
+
+.career {
+  font-family: $font;
+  background-color: #fff;
   text-align: center;
-  font-family: 'poppins';
 
-  &__Header{
-    display: inline-block;
-    font-size: 25px;
-    font-weight: 700;
-    padding: 20px;
-  }
-}
-.careerInnerContainer {
-  display: block;
-}
-
-.container {
-  width: 350px;
-  margin: 0 auto;
-  display: block;
-
-  button {
-    position: relative;
-    background-color: #66FA66;
-    border: none;
-    border-radius: 10px;
-    width: 80px;
-    height: 25px;
-    font-size: xx-small;
-    left: 35%;
-  }
-}
-
-.career3 {
-  border: 1px solid #d9d9d9;
-  position: relative;
-  bottom: 7px;
-  right: 7px;
-  z-index: 1px;
-  background-color: #d9d9d9;
-  padding: 5px 10px;
-  span{
-    display: inline-flex;
-  }
-  p{
-    padding: 0px 20px;
-    margin-bottom: 0px;
-    font-size: small;
-  }
-}
-
-.career2 {
-  border: 1px solid #d9d9d9;
-  position: relative;
-  bottom: 7px;
-  right: 7px;
-  z-index: 1px;
-  background-color: #d9d9d9;
-  padding: 5px 10px;
-  //margin: 95px 30px;
-  span{
-    display: inline-flex;
-  }
-  p{
-    padding: 0px 20px;
-    margin-bottom: 0px;
-    font-size: small;
-  }
-}
-
-.careerCover {
-  border: 1px solid;
-  border-color: grey;
-  margin: 44px 30px;
-}
-
-@media (min-width: 1024px) {
-  .careerContainer {
-    &__Header{
-      font-size: 35px;
-      font-weight: 800;
-    }
-  }
-
-  .careerInnerContainer {
+  &__container {
     display: flex;
-    width: 60%;
+    flex-direction: column-reverse;
+    padding: 1rem 1rem 2rem;
+  }
+
+  &__content {
+    max-width: 500px;
     margin: 0 auto;
   }
-  
-  .container {
-    width: 500px;
-  
-    button {
-      width: 100px;
-      height: 30px;
-      font-size: small;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $text-dark;
+    margin-bottom: 1rem;
+
+    span {
+      color: $highlight-color;
+    }
+
+    strong {
+      font-weight: 700;
     }
   }
-  
-  .career3 {
-    padding: 15px 15px;
-    p{
-      font-size: larger;
+
+  &__subtitle {
+    font-size: 1rem;
+    color: $text-muted;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  &__btn {
+    background: linear-gradient(
+      to right,
+      $primary-color,
+      lighten($primary-color, 40%)
+    );
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+
+    &:hover {
+      background: linear-gradient(
+        to left,
+        $primary-color,
+        lighten($primary-color, 40%)
+      );
     }
   }
-  
-  .career2 {
-    padding: 15px 15px;
-    p{
-      font-size: larger;
+
+  &__image-wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
     }
   }
-  
-  .careerCover {
-    margin: 50px 0px;
+
+  // Services Section
+  &__services-section {
+    background-color: $services-bg;
+    padding: 2rem 0 3rem;
+    position: relative;
+  }
+
+  &__services-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__services-title-box {
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 0 3rem 3rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    align-self: flex-start;
+    max-width: 250px;
+    text-align: left;
+  }
+
+  &__services-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+
+    span {
+      color: $highlight-color;
+    }
+  }
+
+  &__services-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__service-card {
+    background-color: #fff;
+    padding: 0.8rem 0.8rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    flex: 1;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  &__service-icon {
+    font-size: 2rem;
+    color: #007bff;
+    transition: all 0.3s ease;
+
+    &__service-icon:hover {
+      color: darken(#007bff, 10%);
+      transform: scale(1.1);
+    }
+  }
+
+  &__service-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0rem;
+  }
+
+  &__service-description {
+    font-size: 0.95rem;
+    color: $text-muted;
+    line-height: 1.5;
+  }
+}
+
+/* 🔹 Tablet view (768px and up) */
+@media (min-width: $tablet) {
+  .career {
+    &__container {
+      flex-direction: row;
+      padding: 1rem 4rem;
+      justify-content: space-between;
+      text-align: left;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    &__image-wrapper img {
+      width: clamp(260px, 35vw, 360px);
+    }
+
+    &__services-wrapper {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
+    &__services-title-box {
+      margin: 6rem 0;
+    }
+
+    &__services-grid {
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 1.5rem;
+      flex: 1;
+    }
+
+    &__service-card {
+      max-width: 220px;
+      margin: 0;
+    }
+  }
+}
+
+/* 🔹 Desktop view (1200px and up) */
+@media (min-width: $desktop) {
+  .career {
+    &__container {
+      padding: 0.2rem 12rem;
+      gap: 2rem;
+    }
+    &__content {
+      max-width: 550px;
+    }
+
+    &__title {
+      font-size: 2.8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    &__subtitle {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    &__image-wrapper img {
+      width: clamp(280px, 28vw, 380px);
+    }
+
+    &__services-wrapper {
+      gap: 5rem;
+    }
+
+    &__services-title-box {
+      margin: 6rem 0;
+    }
+
+    &__services-grid {
+      gap: 5rem;
+    }
   }
 }
