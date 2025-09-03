@@ -4,12 +4,16 @@ import Navbar from "./Navbar";
 import SidebarMenu from "./SideBarMenu";
 
 const NavbarContainer = () => {
-  const [activeRoute, setActiveRoute] = useState("Resume/");
+  const [activeRoute, setActiveRoute] = useState("/Resume/");
   const { isDesktop } = useMediaQueryContext();
 
   const commonProps = { activeRoute, setActiveRoute };
 
-  return isDesktop ? <Navbar {...commonProps} /> : <SidebarMenu {...commonProps} />;
+  return isDesktop ? (
+    <Navbar {...commonProps} />
+  ) : (
+    <SidebarMenu {...commonProps} />
+  );
 };
 
 export default NavbarContainer;

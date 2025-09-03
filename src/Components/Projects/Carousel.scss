@@ -1,6 +1,7 @@
 .card-carousel {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   width: 80%;
   margin: 0 auto;
@@ -12,117 +13,57 @@
   &__cards {
     display: grid;
     gap: 30px;
-    grid-template-columns: 1fr; // 1 column on mobile
-    grid-auto-rows: 250px; // Adjust the height as needed for mobile
+    grid-template-columns: 1fr;
+    grid-auto-rows: 250px;
     justify-items: center;
   }
 
-  &__card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  &__arrow {
+    border: none;
+    background: none; // remove all background
+    padding: 10px;
     cursor: pointer;
-    transition: transform 0.3s ease;
-    border-radius: 10px;
-
-    // Make card size responsive
-    width: 90%;
-    height: 100%;
-
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
-
-  &__card-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  &__card-overlay {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: #333;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 1;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    box-sizing: border-box;
 
-    .card-carousel__card-text {
-      font-size: 16px;
-      font-weight: bold;
-    }
-  }
-
-  &__card:hover .card-carousel__card-overlay {
-    opacity: 1;
-  }
-
-  &__arrow {
-    background: #f1f1f1;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1;
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    transition: background 0.3s ease, transform 0.3s ease;
-
-    &:hover {
-      background: #ddd;
+    svg {
+      transition: transform 0.2s, font-weight 0.2s;
     }
 
-    &:active {
-      transform: scale(0.95);
-    }
-
-    // Beating effect
-    &--left,
-    &--right {
-      animation: beat 1s infinite;
-      padding-bottom: 5px;
-    }
-  }
-
-  &__arrow--left {
-    left: 5px;
-  }
-
-  &__arrow--right {
-    right: 5px;
-  }
-
-  @keyframes beat {
-    0% {
-      transform: scale(1);
-    }
-
-    50% {
+    &:hover svg,
+    &:focus svg {
       transform: scale(1.1);
     }
 
-    100% {
-      transform: scale(1);
+    &:active svg {
+      font-weight: bold;
+      transform: scale(1.15);
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    &--left {
+      left: -30px;
+    }
+
+    &--right {
+      right: -30px;
     }
   }
 
-  // Pagination styles
   &__pagination {
-    position: fixed;
+    position: absolute;
+    bottom: -25px;
     left: 50%;
-    bottom: 10px;
     transform: translateX(-50%);
     display: flex;
     gap: 8px;
@@ -140,10 +81,54 @@
     &:hover {
       background-color: #bbb;
     }
+
+    &--active {
+      background-color: #333;
+    }
+  }
+}
+
+// Card styles (can go in Card.scss but keeping BEM naming here)
+.card-carousel__card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 90%;
+  height: 100%;
+
+  &:hover {
+    transform: scale(1.05);
   }
 
-  &__pagination-circle--active {
-    background-color: #333;
+  &-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+
+    .card-carousel__card-text {
+      font-size: 16px;
+      font-weight: bold;
+    }
   }
 }
 
@@ -152,52 +137,37 @@
     width: 85%;
 
     &__cards {
-      grid-template-columns: repeat(2, 1fr); // 3 columns on desktop
-      grid-auto-rows: 220px; // Adjust the height as needed for desktop
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 220px;
     }
 
     &__arrow--left {
-      left: 50px;
+      left: -40px;
     }
 
     &__arrow--right {
-      right: 50px;
+      right: -40px;
     }
 
     &__pagination {
-      bottom: 30px;
+      bottom: -30px;
     }
   }
 }
 
 @media (min-width: 1024px) {
   .card-carousel {
-    width: 85%;
-
     &__cards {
-      grid-template-columns: repeat(3, 1fr); // 3 columns on desktop
-      grid-auto-rows: 220px; // Adjust the height as needed for desktop
+      grid-template-columns: repeat(3, 1fr);
     }
 
     &__card-overlay {
-      opacity: 0; // Hidden by default on desktop
+      opacity: 0;
       transition: opacity 0.3s ease;
     }
 
-    &__card:hover .card-carousel__card-overlay {
-      opacity: 1; // Show overlay on hover for desktop
-    }
-
-    &__arrow--left {
-      left: 50px;
-    }
-
-    &__arrow--right {
-      right: 50px;
-    }
-
-    &__pagination {
-      bottom: 30px;
+    &__card:hover &__card-overlay {
+      opacity: 1;
     }
   }
 }

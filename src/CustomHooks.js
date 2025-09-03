@@ -7,7 +7,7 @@ function useBodyClass() {
   useEffect(() => {
     const classMap = {
       "/Resume/Projects": "body__grey",
-      "/Resume/Contacts": "body__lightBlue",
+      "/Resume/Contact": "body__lightBlue",
     };
     const currentClass = classMap[location.pathname] || "__noColor";
 

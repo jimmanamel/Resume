@@ -1,27 +1,7 @@
-import React from "react";
-import "./Career.scss";
+import { experiences } from "../Constants/constant";
 import CareerImage from "../../Images/careerImage.webp";
 
-const experiences = [
-  {
-    title: "Graduation",
-    description:
-      "Completed my Bachelor's degree in Computer Science and Engineering from College of Engineering, Chengannur in the year of 2020.",
-    icon: "https://twemoji.maxcdn.com/v/latest/svg/1f393.svg",
-  },
-  {
-    title: "Project Engineer",
-    description:
-      "Started my career with Wipro & Apple in the year 2020, right after college.",
-    icon: "https://twemoji.maxcdn.com/v/latest/svg/1f4bc.svg",
-  },
-  {
-    title: "Analyst",
-    description:
-      "Switched to Accenture in 2023, to a senior position with more roles and responsibilities.",
-    icon: "https://twemoji.maxcdn.com/v/latest/svg/1f9d1-200d-1f4bb.svg",
-  },
-];
+import "./Career.scss";
 
 const CareerContainer = () => {
   return (
@@ -69,7 +49,7 @@ const CareerContainer = () => {
 
           <div className="career__services-grid">
             {experiences.map((service, index) => (
-              <div className="career__service-card" key={index}>
+              <div className="career__service-card" key={service.id}>
                 <div className="career__service-icon">
                   <img
                     src={service.icon}

@@ -5,15 +5,10 @@ import "./Projects.scss";
 const ProjectsContainer = () => {
   return (
     <div className="projectContainer">
-      <div className="projectContainer__HeaderSection">
-        <h2 className="projectContainer__header">Case Study</h2>
-        <span className="projectContainer__orderSelector">
-          <select name="order" id="Projects">
-            <option value="Recent">Recent</option>
-            <option value="Alphabetical">Alphabetical</option>
-          </select>
-        </span>
-      </div>
+      <h2>Case Study</h2>
+      <p>
+        Every project is a unique endeavor. See what I have accomplished so far!
+      </p>
       <Carousel />
     </div>
   );

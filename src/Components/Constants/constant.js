@@ -17,7 +17,7 @@ const menuItems = [
   { route: "/Resume/", icon: <FiHome />, label: "Home" },
   { route: "/Resume/Career", icon: <MdWorkOutline />, label: "Career" },
   { route: "/Resume/Projects", icon: <GoProjectSymlink />, label: "Projects" },
-  { route: "/Resume/Contacts", icon: <IoMdContacts />, label: "Contacts" },
+  { route: "/Resume/Contact", icon: <IoMdContacts />, label: "Contact" },
 ];
 
 const socialLinks = [
@@ -65,16 +65,34 @@ const cards = [
     description:
       "Login security application created using React Js with front end and Node Js backend. Authentication is done using JWT token, by following HTTP cookie machanism.",
   },
-  {
-    id: 3,
-    imgSrc: sentimentImg,
-    name: "Sentiment Chat App",
-    description:
-      "Sentiment chat app that shows emoji based on text input. Creted using React Js and Python.",
-  },
+  { id: 3, imgSrc: "", name: comingSoonText },
   { id: 4, imgSrc: "", name: comingSoonText },
   { id: 5, imgSrc: "", name: comingSoonText },
   { id: 6, imgSrc: "", name: comingSoonText },
 ];
 
-export { menuItems, cards, socialLinks };
+const experiences = [
+  {
+    id: 1,
+    title: "Graduation",
+    description:
+      "Completed my Bachelor's degree in Computer Science and Engineering from College of Engineering, Chengannur in the year of 2020.",
+    icon: "https://twemoji.maxcdn.com/v/latest/svg/1f393.svg",
+  },
+  {
+    id: 2,
+    title: "Project Engineer",
+    description:
+      "Started my career with Wipro & Apple in the year 2020, right after college.",
+    icon: "https://twemoji.maxcdn.com/v/latest/svg/1f4bc.svg",
+  },
+  {
+    id: 3,
+    title: "Analyst",
+    description:
+      "Switched to Accenture in 2023, to a senior position with more roles and responsibilities.",
+    icon: "https://twemoji.maxcdn.com/v/latest/svg/1f9d1-200d-1f4bb.svg",
+  },
+];
+
+export { menuItems, cards, socialLinks, experiences };
