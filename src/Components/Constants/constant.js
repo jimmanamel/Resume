@@ -1,4 +1,3 @@
-import sentimentImg from "../../Images/senti3.png";
 import resumeImg from "../../Images/Resume.png";
 import login from "../../Images/login.avif";
 import { FiHome } from "react-icons/fi";
