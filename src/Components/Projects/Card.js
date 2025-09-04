@@ -1,5 +1,4 @@
-import { IoIosConstruct } from "react-icons/io";
-import ComingSoonContainer from "../ComingSoon/ComingSoonContainer";
+import ComingSoonPlaceholder from "../ComingSoon/ComingSoonPlaceholder";
 
 const Card = ({ card, openModal }) => {
   const { id, imgSrc, name } = card;
@@ -18,7 +17,7 @@ const Card = ({ card, openModal }) => {
           </div>
         </>
       ) : (
-        <ComingSoonContainer />
+        <ComingSoonPlaceholder />
       )}
     </div>
   );

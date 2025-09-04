@@ -47,8 +47,6 @@ const socialLinks = [
   },
 ];
 
-const comingSoonText = "Coming Soon... ";
-
 const cards = [
   {
     id: 1,
@@ -64,10 +62,10 @@ const cards = [
     description:
       "Login security application created using React Js with front end and Node Js backend. Authentication is done using JWT token, by following HTTP cookie machanism.",
   },
-  { id: 3, imgSrc: "", name: comingSoonText },
-  { id: 4, imgSrc: "", name: comingSoonText },
-  { id: 5, imgSrc: "", name: comingSoonText },
-  { id: 6, imgSrc: "", name: comingSoonText },
+  { id: 3, imgSrc: "", name: "" },
+  { id: 4, imgSrc: "", name: "" },
+  { id: 5, imgSrc: "", name: "" },
+  { id: 6, imgSrc: "", name: "" },
 ];
 
 const experiences = [

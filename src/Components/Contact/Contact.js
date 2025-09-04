@@ -1,10 +1,10 @@
 import { FiPhoneCall } from "react-icons/fi";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { useMediaQueryContext } from "../../MediaQueryContext";
-import ComingSoonContainer from "../ComingSoon/ComingSoonContainer";
+import ComingSoonPlaceholder from "../ComingSoon/ComingSoonPlaceholder";
 import "./Contact.scss";
 
-const ContactContainer = () => {
+const Contact = () => {
   const { isDesktop } = useMediaQueryContext();
 
   return (
@@ -43,7 +43,7 @@ const ContactContainer = () => {
         </div>
 
         <div className="contacts__visual">
-          <ComingSoonContainer />
+          <ComingSoonPlaceholder />
         </div>
       </div>
 
@@ -70,4 +70,4 @@ const ContactContainer = () => {
   );
 };
 
-export default ContactContainer;
+export default Contact;

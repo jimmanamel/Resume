@@ -1,14 +1,13 @@
-// src/components/Modal.jsx
-import React, { useEffect } from 'react';
-import './Modal.scss';
+import React, { useEffect } from "react";
+import "./Modal.scss";
 
 export default function Modal({ isOpen, onClose, children }) {
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === "Escape") onClose();
     };
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
   }, [onClose]);
 
   if (!isOpen) return null;
@@ -16,7 +15,9 @@ export default function Modal({ isOpen, onClose, children }) {
   return (
     <div className="modal__overlay" onClick={onClose}>
       <div className="modal__content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal__close" onClick={onClose}>×</button>
+        <button className="modal__close" onClick={onClose}>
+          ×
+        </button>
         {children}
       </div>
     </div>

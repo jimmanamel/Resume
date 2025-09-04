@@ -1,22 +1,22 @@
-// src/styles/CaseStudyModal.scss
-
 .case-study {
+  text-align: left;
+
   &__title {
     margin-top: 0;
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   &__description {
-    margin: 10px 0 20px;
-    font-size: 16px;
+    margin: 0.625rem 0 1.25rem;
+    font-size: 1rem;
   }
 
   &__video {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 
     video {
       width: 100%;
-      border-radius: 6px;
+      border-radius: 0.375rem;
     }
   }
 
@@ -25,6 +25,7 @@
     color: #0366d6;
     text-decoration: none;
     font-weight: bold;
+    text-align: left;
 
     &:hover {
       text-decoration: underline;

@@ -1,7 +1,7 @@
 import { IoIosConstruct } from "react-icons/io";
 import "./ComingSoon.scss";
 
-const ComingSoonContainer = () => {
+const ComingSoonPlaceholder = () => {
   return (
     <div className="placeholder">
       <IoIosConstruct size={40} />
@@ -10,4 +10,4 @@ const ComingSoonContainer = () => {
   );
 };
 
-export default ComingSoonContainer;
+export default ComingSoonPlaceholder;

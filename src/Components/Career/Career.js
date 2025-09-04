@@ -3,7 +3,7 @@ import CareerImage from "../../Images/careerImage.webp";
 
 import "./Career.scss";
 
-const CareerContainer = () => {
+const Career = () => {
   return (
     <section className="career">
       <div className="career__container">
@@ -73,4 +73,4 @@ const CareerContainer = () => {
   );
 };
 
-export default CareerContainer;
+export default Career;
