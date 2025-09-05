@@ -15,7 +15,7 @@ const Card = ({ card, openModal }) => {
             src={imgSrc}
             alt={name}
             className="card-carousel__card-img"
-            loading="lazy"
+            loading="eager"
           />
           <div className="card-carousel__card-overlay">
             <div className="card-carousel__card-text">{name}</div>
