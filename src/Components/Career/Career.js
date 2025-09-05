@@ -33,11 +33,10 @@ const Career = () => {
             src={CareerImage}
             alt="Frontend developer illustration"
             className="career__image"
-            loading="lazy"
+            loading="eager"
           />
         </div>
       </div>
-
       {/* Services / Career Path */}
       <div className="career__services-section">
         <div className="career__services-wrapper">

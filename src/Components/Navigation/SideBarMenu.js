@@ -26,7 +26,12 @@ const SidebarMenu = ({ activeRoute, setActiveRoute }) => {
 
       <div className={`sidebar__drawer ${open ? "sidebar__drawer--open" : ""}`}>
         <div className="sidebar__header">
-          <img src={dp} alt="profile" className="sidebar__profile-img" />
+          <img
+            src={dp}
+            alt="profile"
+            className="sidebar__profile-img"
+            loading="lazy"
+          />
           <div className="sidebar__profile-info">
             <h3 className="sidebar__name">Jim Joseph</h3>
             <p className="sidebar__role">Software Developer</p>

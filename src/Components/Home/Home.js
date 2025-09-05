@@ -6,7 +6,7 @@ import "./Home.scss";
 const Home = () => (
   <div className="home">
     <div className="home__image-wrapper">
-      <img className="home__image" src={dp} alt="Profile" />
+      <img className="home__image" src={dp} alt="Profile" loading="eager" />
     </div>
 
     <div className="home__content">
