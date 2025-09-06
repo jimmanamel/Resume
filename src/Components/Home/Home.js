@@ -1,4 +1,4 @@
-import dp from "../../Images/Edited_blackshirt.png";
+import dp from "../../Images/Edited_blackshirt.webp";
 import { handleResumeDownload } from "../Helper/helper";
 import { socialLinks } from "../Constants/constant";
 import "./Home.scss";

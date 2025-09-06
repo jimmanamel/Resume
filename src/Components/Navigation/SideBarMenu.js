@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { menuItems } from "../Constants/constant";
 
 import "./SideBarMenu.scss";
-import dp from "../../Images/Edited_blackshirt.png";
+import dp from "../../Images/Edited_blackshirt.webp";
 
 const SidebarMenu = ({ activeRoute, setActiveRoute }) => {
   const [open, setOpen] = useState(false);

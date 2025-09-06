@@ -1,4 +1,4 @@
-import resumeImg from "../../Images/Resume.png";
+import resumeImg from "../../Images/Resume.webp";
 import login from "../../Images/login.avif";
 import { FiHome } from "react-icons/fi";
 import { MdWorkOutline } from "react-icons/md";
