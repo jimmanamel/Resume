@@ -7,8 +7,6 @@ import { Dna } from "react-loader-spinner";
 import routes from "./routes";
 
 import "./App.scss";
-import "./global.scss";
-import "./font.scss";
 
 const App = () => {
   useBodyClass();
