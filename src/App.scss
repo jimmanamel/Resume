@@ -1,11 +1,12 @@
-$grey: #d9d9d9;
+@use "./Abstract/variables" as *;
+@use "./Abstract/mixins" as *;
 
 .body {
   &__grey {
-    background-color: rgba($grey, 20%);
+    @include background-opacity($color-light-silver, 0.2);
   }
   &__lightBlue {
-    background-color: #05cbcb;
+    background-color: $color-robin-egg-blue;
   }
 }
 

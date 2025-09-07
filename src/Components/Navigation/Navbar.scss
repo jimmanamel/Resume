@@ -1,5 +1,8 @@
+@use "../../Abstract/mixins" as *;
+@use "../../Abstract/Variables" as *;
+
 .navbar {
-  background-color: rgba(217, 217, 217, 0.8);
+  @include background-opacity($color-light-silver, 0.8);
   height: 5rem;
   display: flex;
   align-items: center;
@@ -22,14 +25,14 @@
     box-sizing: border-box;
 
     &--selected {
-      background-color: white;
-      border: 0.0625rem solid #35a835;
+      background-color: $color-white;
+      border: 0.0625rem solid $color-wageningen-green;
     }
   }
 
   &__link {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: $color-black;
     padding: 0.3125rem 0;
     display: inline-block;
   }

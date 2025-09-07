@@ -1,3 +1,5 @@
+@use "../../Abstract/variables" as *;
+
 $tablet: 48rem;
 $desktop: 64rem;
 
@@ -30,7 +32,7 @@ $desktop: 64rem;
     top: 50%;
     transform: translateY(-50%);
     z-index: 2;
-    color: #333;
+    color: $color-dark-charcoal;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,7 +75,7 @@ $desktop: 64rem;
   }
 
   &__pagination-circle {
-    background-color: #ccc;
+    background-color: $color-chinese-silver;
     border: none;
     border-radius: 50%;
     width: 0.75rem;
@@ -82,11 +84,11 @@ $desktop: 64rem;
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #bbb;
+      background-color: $color-gray-x11;
     }
 
     &--active {
-      background-color: #333;
+      background-color: $color-dark-charcoal;
     }
   }
 }
@@ -96,7 +98,7 @@ $desktop: 64rem;
   position: relative;
   overflow: hidden;
   border-radius: 0.625rem;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  box-shadow: $shadow-xs;
   cursor: pointer;
   transition: transform 0.3s ease;
   width: 90%;
@@ -124,7 +126,7 @@ $desktop: 64rem;
     align-items: center;
     justify-content: center;
     opacity: 1;
-    color: #fff;
+    color: $color-white;
     padding: 0.625rem;
     box-sizing: border-box;
 

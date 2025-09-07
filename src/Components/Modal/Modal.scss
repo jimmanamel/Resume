@@ -1,8 +1,11 @@
+@use "../../Abstract/variables" as *;
+@use "../../Abstract/mixins" as *;
+
 .modal {
   &__overlay {
     position: fixed;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    @include background-opacity($color-black, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,13 +13,13 @@
   }
 
   &__content {
-    background: #fff;
+    background: $color-white;
     padding: 1.5rem;
     border-radius: 0.625rem;
     max-width: 43.75rem;
     width: 90%;
     position: relative;
-    box-shadow: 0 0.3125rem 1.25rem rgba(0, 0, 0, 0.3);
+    box-shadow: $shadow-lg;
   }
 
   &__close {
@@ -27,10 +30,10 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: #555;
+    color: $color-davy-grey;
 
     &:hover {
-      color: #000;
+      color: $color-black;
     }
   }
 }

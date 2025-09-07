@@ -1,5 +1,6 @@
+@use "../../Abstract/variables" as *;
+
 $desktop: 64rem;
-$mightyGreen: #66fa66;
 
 .home {
   text-align: center;
@@ -30,7 +31,7 @@ $mightyGreen: #66fa66;
     margin: 0;
 
     &-type {
-      color: $mightyGreen;
+      color: $color-screaming-green;
       display: inline;
     }
   }
@@ -46,17 +47,17 @@ $mightyGreen: #66fa66;
 
   &__social-link {
     display: inline-block;
-    background-color: #d6d6d6;
+    background-color: $color-light-silver;
     font-size: 1.56rem;
     margin: 0.625rem;
     height: 1.7rem;
     border-radius: 0.3rem;
     cursor: pointer;
-    color: black;
+    color: $color-black;
   }
 
   &__button {
-    background-color: $mightyGreen;
+    background-color: $color-screaming-green;
     border: none;
     border-radius: 1.25rem;
     width: 10.5rem;

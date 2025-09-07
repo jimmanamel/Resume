@@ -1,3 +1,5 @@
+@use "../../Abstract/variables" as *;
+
 .case-study {
   text-align: left;
 
@@ -22,7 +24,7 @@
 
   &__link {
     display: inline-block;
-    color: #0366d6;
+    color: $color-true-blue;
     text-decoration: none;
     font-weight: bold;
     text-align: left;

@@ -1,3 +1,5 @@
+@use "../../Abstract/variables" as *;
+
 .sidebar {
   position: relative;
   margin-top: 4rem;
@@ -19,8 +21,8 @@
     height: 100%;
     width: 80%;
     max-width: 18rem;
-    background: #fff;
-    box-shadow: -0.125rem 0 0.625rem rgba(0, 0, 0, 0.1);
+    background: $color-white;
+    box-shadow: $shadow-ng-sm;
     transition: right 0.3s ease;
     z-index: 1200;
     padding: 1.5rem 1rem;
@@ -53,13 +55,13 @@
     .sidebar__role {
       margin: 0;
       font-size: 0.86rem;
-      color: #66fa66;
+      color: $color-screaming-green;
     }
   }
 
   &__divider {
     border: none;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid $color-chinese-white;
     margin: 1rem;
   }
 
@@ -85,7 +87,7 @@
     width: 70%;
 
     &--active {
-      background: #f0f0f0;
+      background: $color-anti-flash-white;
       font-weight: 550;
     }
 
