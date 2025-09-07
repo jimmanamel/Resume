@@ -1,5 +1,4 @@
-@use "../../Abstract/mixins" as *;
-@use "../../Abstract/Variables" as *;
+@use "../../Abstract/index" as *;
 
 .navbar {
   @include background-opacity($color-light-silver, 0.8);

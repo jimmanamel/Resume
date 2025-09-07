@@ -1,5 +1,4 @@
-@use "./Abstract/variables" as *;
-@use "./Abstract/mixins" as *;
+@use "./Abstract/index" as *;
 
 .body {
   &__grey {
