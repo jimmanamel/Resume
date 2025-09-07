@@ -1,8 +1,5 @@
 @use "../../Abstract/index" as *;
 
-$tablet: 48rem;
-$desktop: 64rem;
-
 .career {
   background-color: $color-white;
   text-align: center;
@@ -155,7 +152,7 @@ $desktop: 64rem;
 }
 
 /* 🔹 Tablet view (768px and up) */
-@media (min-width: $tablet) {
+@include respond(tablet) {
   .career {
     &__container {
       flex-direction: row;
@@ -204,7 +201,7 @@ $desktop: 64rem;
 }
 
 /* 🔹 Desktop view (1200px and up) */
-@media (min-width: $desktop) {
+@include respond(desktop) {
   .career {
     &__container {
       padding: 0.2rem 12rem;

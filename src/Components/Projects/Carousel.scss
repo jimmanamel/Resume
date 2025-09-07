@@ -1,12 +1,7 @@
 @use "../../Abstract/index" as *;
 
-$tablet: 48rem;
-$desktop: 64rem;
-
 .card-carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
   position: relative;
   width: 80%;
   margin: 0 auto;
@@ -24,6 +19,7 @@ $desktop: 64rem;
   }
 
   &__arrow {
+    @include flex-center;
     border: none;
     background: none; // remove all background
     padding: 0.625rem;
@@ -33,9 +29,6 @@ $desktop: 64rem;
     transform: translateY(-50%);
     z-index: 2;
     color: $color-dark-charcoal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     svg {
       transition: transform 0.2s, font-weight 0.2s;
@@ -116,15 +109,13 @@ $desktop: 64rem;
   }
 
   &-overlay {
+    @include flex-center;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     opacity: 1;
     color: $color-white;
     padding: 0.625rem;
@@ -137,7 +128,7 @@ $desktop: 64rem;
   }
 }
 
-@media (min-width: $tablet) {
+@include respond(tablet) {
   .card-carousel {
     width: 85%;
 
@@ -160,7 +151,7 @@ $desktop: 64rem;
   }
 }
 
-@media (min-width: $desktop) {
+@include respond(desktop) {
   .card-carousel {
     &__cards {
       grid-template-columns: repeat(3, 1fr);

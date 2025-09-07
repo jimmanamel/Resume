@@ -1,3 +1,5 @@
+@use "./Abstract/index" as *;
+
 @font-face {
   font-family: "Poppins";
   font-weight: 300;
@@ -43,7 +45,7 @@ body {
   overflow: auto;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
-  font-family: "Poppins", sans-serif, Arial;
+  font-family: $font-family-base;
 }
 
 html::-webkit-scrollbar,

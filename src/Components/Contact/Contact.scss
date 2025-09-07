@@ -1,7 +1,5 @@
 @use "../../Abstract/index" as *;
 
-$desktop: 64rem;
-
 .contacts {
   margin: 1.25rem;
 
@@ -42,7 +40,7 @@ $desktop: 64rem;
       border-radius: 0.375rem;
       font-size: 0.75rem;
       resize: none;
-      font-family: "Poppins", sans-serif;
+      font-family: $font-family-base;
       transition: border-color 0.3s ease;
 
       &:focus {
@@ -82,9 +80,7 @@ $desktop: 64rem;
   }
 
   &__bottom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     gap: 1.25rem;
     margin-top: 1.875rem;
     flex-wrap: wrap;
@@ -115,7 +111,7 @@ $desktop: 64rem;
 }
 
 // Desktop styles
-@media (min-width: $desktop) {
+@include respond(desktop) {
   .contacts {
     margin: 3.75rem 6.25rem;
 

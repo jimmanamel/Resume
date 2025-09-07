@@ -1,7 +1,5 @@
 @use "../../Abstract/index" as *;
 
-$desktop: 64rem;
-
 .home {
   text-align: center;
 
@@ -68,7 +66,7 @@ $desktop: 64rem;
   }
 }
 
-@media (min-width: $desktop) {
+@include respond(desktop) {
   .home {
     display: flex;
     align-items: center;

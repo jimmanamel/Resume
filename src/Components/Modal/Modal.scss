@@ -2,12 +2,10 @@
 
 .modal {
   &__overlay {
+    @include background-opacity($color-black, 0.6);
+    @include flex-center;
     position: fixed;
     inset: 0;
-    @include background-opacity($color-black, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 999;
   }
 
