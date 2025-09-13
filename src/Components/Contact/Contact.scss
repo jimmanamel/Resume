@@ -113,7 +113,7 @@
 // Desktop styles
 @include respond(desktop) {
   .contacts {
-    margin: 3.75rem 6.25rem;
+    padding: 0.7rem 4rem;
 
     &__top {
       flex-direction: row;
